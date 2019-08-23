@@ -1,6 +1,32 @@
 
 h2 {    margin: 0;    text-transform: uppercase;    margin-bottom: 15px; font-weight: 600; color: #262626;text-transform: none;    font-size: 26px;}
 
+.bolder-title {
+  padding-left: 20px;
+}
+
+.bolder-title:before {
+    content: " ";
+    display: block;
+    width: 2px;
+    height: 25px;
+    background: #fddb81;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+}
+
+.the_form.the_cart_form .ez-selected {
+
+    background-position: 0px -19px;
+
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
 .header_1217 *{
   font-family: "Open Sans";
 }
@@ -946,11 +972,158 @@ outline:none;border-radius: 0px;}
     color: #989898;
     font-weight: 600;
     padding: 0 0 0 0;
-        padding-left: 0px;
-    line-height: 40px;
+    line-height: 20px;
     min-height: 20px;
     transition: all 0.4s;
     max-width: 100%;
     box-sizing: border-box;
 
+}
+
+.cart_list_title a {
+  font-size: 14px;
+}
+
+.cart_price_wrap, .cart_sum_wrap {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-remove {
+  width: 40px;
+  height: 40px;
+  line-height: 0px;
+}
+
+.btn-remove i {
+  font-size: 10px;
+}
+
+.btn-remove:hover {
+  background: #56a988;
+}
+
+.btn-remove:hover i {
+  color: #fff;
+}
+
+#street .form-group label {
+  font-size: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+#msOrder .required-star {
+    display: none;
+    color: #dc3545 !important;
+}
+
+input.form-control {
+  background: #f6f6f6;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+input.form-control.form-control-lg {
+  height: 44px;
+}
+
+textarea.form-control {
+  background: #f6f6f6;
+  padding-top: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  font-size: 13px;
+  height: 170px;
+}
+
+.form-group .checkbox label span {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    color: #5e5e5e;
+    margin-top: -4px;
+    margin-left: 10px;
+}
+
+.form-group .checkbox label b{
+  font-size: 15px;
+  color: #5ca98a;
+}
+
+.form-group .checkbox label span i {
+  font-weight: 600;
+  font-size: 13px;
+  color: #000000;
+  font-style: normal;
+  display: block;
+  padding: 0 0 2px 0;
+}
+
+.qty_wrap input.form-control {
+  font-size: 16px;
+}
+
+.the_cart_form_block_submit .ez-checkbox {
+    background: url(../img/checkbox.png) 0 0px no-repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 0px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-position: 0px 0px;
+}
+
+.qty_wrap span {
+  position: absolute;
+}
+
+.qty_wrap span:hover {
+  cursor: pointer;
+  color:#dc3545;
+}
+
+.qty_wrap span:hover i {
+  color:#dc3545;
+}
+
+.qty_wrap span.minus {
+  left: 25px;
+}
+
+.qty_wrap span.plus {
+  right: 60px;
+}
+
+.qty_wrap span i {
+  font-size: 12px;
+  color: #56a988;
+}
+
+.the_cart_list_total .total_sum p {
+    font-size: 14px;
+    color: #7e7e7e;
+    font-weight: 600;
+}
+
+.the_cart_list_total .total_sum p span{
+    color: #000;
+}
+
+.policy span  {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.policy span a  {
+  color: #5ca98a
 }
