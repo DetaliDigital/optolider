@@ -38,4 +38,30 @@ $('div.count').click(function(e){
         }
     });
 
+  $(document).on('change', '[name="region"]', function() {
+          if ($('[name="region"]:checked').attr('id') == 'delivery_moscow') {
+        		$("#delivery_2").show();
+        		$("#delivery_4").show();
+        		$("#delivery_1").hide();
+        		$("#delivery_3").hide();
+            $("#city").hide();
+
+        	}
+        	if ($('[name="region"]:checked').attr('id') == 'delivery_spb') {
+        		$("#delivery_2").hide();
+        		$("#delivery_1").show();
+        		$("#delivery_3").show();
+        		$("#delivery_4").hide();
+            $("#city").hide();
+
+        	}
+        	if ($('[name="region"]:checked').attr('id') == 'delivery_region') {
+        		$("#delivery_1").hide();
+        		$("#delivery_2").hide();
+        		$("#delivery_3").hide();
+        		$("#delivery_4").show();
+            $("#city").show();
+        	}
+        })
+
 });
