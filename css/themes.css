@@ -391,10 +391,6 @@ margin-top:-3px;z-index:3;}
   display: flex;
   flex-wrap:wrap;
   height: 100%;}
-.catalog_0718 .prod_item span{
-  padding-left: 0;
-}
-
 
 .catalog_0718 .prod_item > .subtitle{
   flex-basis: 100%;
@@ -883,13 +879,13 @@ outline:none;border-radius: 0px;}
 /*tabs*/
 
 .nav-tabs-outer {
-    border-bottom: 1px solid #dee2e6;
     background-color: #fafafa;
     border-top: 2px solid #eaeaea;
 }
 
 .nav-tabs {
     background-color: #fafafa;
+    border-bottom: unset;
 }
 
 
@@ -1128,8 +1124,13 @@ textarea.form-control {
     width: 70px;
 }
 
-.qty_wrap input[type="number"] {
+input[type="number"]  {
     -moz-appearance: textfield;
+}
+
+input.form-control {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 @media (max-width: 576px) {
