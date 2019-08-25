@@ -968,12 +968,12 @@ outline:none;border-radius: 0px;}
 
     display: block;
     float: left;
-    font-size: 11px;
+    font-size: 14px;
     color: #989898;
     font-weight: 600;
     padding: 0 0 0 0;
-    line-height: 20px;
-    min-height: 20px;
+    line-height: 35px;
+    min-height: 35px;
     transition: all 0.4s;
     max-width: 100%;
     box-sizing: border-box;
@@ -993,6 +993,7 @@ outline:none;border-radius: 0px;}
   width: 40px;
   height: 40px;
   line-height: 0px;
+  background: #fff;
 }
 
 .btn-remove i {
@@ -1083,32 +1084,6 @@ textarea.form-control {
     background-position: 0px 0px;
 }
 
-.qty_wrap span {
-  position: absolute;
-}
-
-.qty_wrap span:hover {
-  cursor: pointer;
-  color:#dc3545;
-}
-
-.qty_wrap span:hover i {
-  color:#dc3545;
-}
-
-.qty_wrap span.minus {
-  left: 25px;
-}
-
-.qty_wrap span.plus {
-  right: 60px;
-}
-
-.qty_wrap span i {
-  font-size: 12px;
-  color: #56a988;
-}
-
 .the_cart_list_total .total_sum p {
     font-size: 14px;
     color: #7e7e7e;
@@ -1119,6 +1094,7 @@ textarea.form-control {
     color: #000;
 }
 
+
 .policy span  {
   font-size: 13px;
   font-weight: 600;
@@ -1126,4 +1102,65 @@ textarea.form-control {
 
 .policy span a  {
   color: #5ca98a
+}
+
+.input-group-text {
+  color: #358f6c;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 0.2rem .75rem;
+}
+
+.input-group-text.input-group-prepend {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-group-text.input-group-append {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.qty_wrap input.form-control {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    width: 70px;
+}
+
+.qty_wrap input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 576px) {
+  .border-mobile {
+    border: 1px solid #dee2e6
+
+  }
+  .cart_delete_wrap {
+    position: absolute;
+    top: 11px;
+    left: -30px;
+  }
+  .qty_wrap {
+    position: absolute;
+    top: 274px;
+  }
+
+  .cart_price_wrap, .cart_sum_wrap {
+      color: #5ca98a;
+  }
+  .slick-list.draggable {
+      padding-left: 1rem;
+  }
+
+  .the_cart_list_item {
+      width: 215px;
+      border-bottom: none !important;
+  }
+
+  .the_cart_list_total {
+      border-top: 1px solid #dee2e6;
+  }
+
 }

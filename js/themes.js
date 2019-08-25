@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-$('.form-group').on('click', '.input_count_action', function(e) {
+$('.input-group').on('click', '.input_count_action', function(e) {
 
 	var $input = $(this).closest("div").find('input');
 	var count = parseInt($input.val());
@@ -38,30 +38,40 @@ $('div.count').click(function(e){
         }
     });
 
-  $(document).on('change', '[name="region"]', function() {
-          if ($('[name="region"]:checked').attr('id') == 'delivery_moscow') {
-        		$("#delivery_2").show();
-        		$("#delivery_4").show();
-        		$("#delivery_1").hide();
-        		$("#delivery_3").hide();
-            $("#city").hide();
+    $(document).on('change', '[name="region"]', function() {
+            if ($('[name="region"]:checked').attr('id') == 'delivery_moscow') {
+              $("#delivery_2").show();
+              $("#delivery_4").show();
+              $("#delivery_1").hide();
+              $("#delivery_3").hide();
+              $("#city").hide();
 
-        	}
-        	if ($('[name="region"]:checked').attr('id') == 'delivery_spb') {
-        		$("#delivery_2").hide();
-        		$("#delivery_1").show();
-        		$("#delivery_3").show();
-        		$("#delivery_4").hide();
-            $("#city").hide();
+            }
+            if ($('[name="region"]:checked').attr('id') == 'delivery_spb') {
+              $("#delivery_2").hide();
+              $("#delivery_1").show();
+              $("#delivery_3").show();
+              $("#delivery_4").hide();
+              $("#city").hide();
 
-        	}
-        	if ($('[name="region"]:checked').attr('id') == 'delivery_region') {
-        		$("#delivery_1").hide();
-        		$("#delivery_2").hide();
-        		$("#delivery_3").hide();
-        		$("#delivery_4").show();
-            $("#city").show();
-        	}
-        })
+            }
+            if ($('[name="region"]:checked').attr('id') == 'delivery_region') {
+              $("#delivery_1").hide();
+              $("#delivery_2").hide();
+              $("#delivery_3").hide();
+              $("#delivery_4").show();
+              $("#city").show();
+            }
+          })
+
+          if ($(window).width() < 576) {
+          $('.variable-width').slick({
+            dots: false,
+						arrows: false,
+            speed: 300,
+            slidesToShow: 1,
+						variableWidth: true
+          });
+        }
 
 });
