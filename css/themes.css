@@ -1021,10 +1021,13 @@ clear: both;    font-weight: 600;    font-size: 12px;    color: #a9a9a9;    widt
 
 .header-column .btn.btn-catalog {margin-right: 0px;padding: 20px 27px 20px 24px;line-height: 20px;text-transform: uppercase;background-color: #3b7a61;color: #fff;font-size: 15px;border: 0;
 outline:none;border-radius: 0px;}
-.header-column button {
-  margin-right:22px;
-  padding: .57rem .75rem;
+
+.label-button {
+    margin-right: 22px;
+    padding: .57rem .75rem;
+    color: #fff !important;
 }
+
 .header-column .badge {padding: .25em .65em;text-transform:uppercase;}
 .header-links li a {font-weight:600;text-align: right; font-size: 15px; padding-right: 0;}
 
