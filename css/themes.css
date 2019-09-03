@@ -1927,6 +1927,14 @@ input.form-control {
 	margin-bottom: 10px;
 	max-width: 100%;
 }
+
+.megamenu .level2 > p {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px; 
+}
+
 .megamenu .sub-menu-level2 li.level3 > a {
 	color: #222 !important;
 	display: inline-block;
