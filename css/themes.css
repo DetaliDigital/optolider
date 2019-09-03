@@ -1928,11 +1928,16 @@ input.form-control {
 	max-width: 100%;
 }
 
+.megamenu .level2 > a:hover {
+	text-decoration: none;
+}
+
+
 .megamenu .level2 > p {
     color: #000;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .megamenu .sub-menu-level2 li.level3 > a {
