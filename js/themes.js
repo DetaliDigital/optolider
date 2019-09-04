@@ -83,13 +83,16 @@ $('div.count').click(function(e){
 						 menu_id.removeClass('menu-open');
 						 nav_icon.removeClass('fa-times');
 						 nav_icon.addClass('fa-bars');
+						 nav_icon.removeClass('fa-times');
+						 nav_body.removeClass('fixed');
 						 nav_body.animate({
-            left: '0px'
+             left: '0px'
         		}, 200);
 					 }else{
 						 menu_id.addClass('menu-open');
 						 nav_icon.addClass('fa-times');
 						 nav_icon.removeClass('fa-bars');
+						 nav_body.addClass('fixed');
 						 nav_body.animate({
 						 left: '250px'
 					 }, 200);
