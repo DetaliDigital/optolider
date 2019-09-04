@@ -92,9 +92,8 @@
   font-family: "Open Sans";
 }
 
-body {
-  position: relative;
-  margin: 0;
+body.fixed {
+  position:fixed;
 }
 
 h1 {
@@ -337,7 +336,7 @@ h2 {
   .ui-widget-content {
       z-index: 10000 !important;
   }
-  .header-search input
+  #header .header-search input
   {
       background-color: #479173;
       border-radius: 3px;
@@ -352,7 +351,7 @@ h2 {
   }
   .header-search button {
       position: absolute;
-      top: 5px;
+      top: 7px;
       right: 22px;
       height: 30px;
       width: 30px;
