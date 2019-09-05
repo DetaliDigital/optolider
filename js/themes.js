@@ -160,6 +160,29 @@ $('div.count').click(function(e){
 			 return false;
 		 });
 
+		 $(".level.dropdown").on("click", function(){
+		    var menuopener = $(this);
+				var menulevel2 = $('#menu .mobile-sub-menu');
+		    if (menuopener.hasClass("dropdown-left")) {
+								menuopener.closest('li').children('ul').slideDown();
+		            menuopener.removeClass('dropdown-right');
+						 }
+						 else
+						 {
+							menuopener.closest('#menu').children('ul').animate({
+				 			 left: '-250px'
+				 		 	 }, 200);
+							menuopener.addClass('dropdown-left');
+						  function pausemenuslide3 (){
+							menulevel2.css({'display' : 'block'});
+							menuopener.children('.mobile-sub-menu').animate({
+				 			 left: '250'
+				 		 	 }, 200);
+							}
+							setTimeout (pausemenuslide3,200);
+						 }
+						 return false;
+		});
 
-		 /* ---- For Mobile Menu Slide JS End ---- */
+/* ---- For Mobile Menu Slide JS End ---- */
 });

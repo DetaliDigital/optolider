@@ -632,7 +632,7 @@ h2 {
 
 .catalog_0718 .prod_item{
   padding: 20px;
-  border:1px solid #eaeaea;
+  border:3px solid #eaeaea;
   font-size: 14px;
   margin: 0 -1px 0;
   position: relative;
@@ -640,6 +640,11 @@ h2 {
   flex-wrap:wrap;
   height: 100%;
 }
+
+.main_catalog .prod_item:hover {
+    border: 3px solid #56a988 !important;
+}
+
 .catalog_0718 .prod_item > form {position: relative;
   display: flex;
   flex-wrap:wrap;
@@ -798,7 +803,7 @@ h2 {
     padding: 20px;
   border-radius: 3px;
 	font-size: 14px;
-  border:1px solid #eaeaea;
+  border:3px solid #eaeaea;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
 	z-index: 20;
@@ -2101,6 +2106,9 @@ input.form-control {
   	color: #1b2839;
   }
 
+  .megamenu .sub-menu-level1 li.level2 {
+    margin-top: 20px;
+  }
 
   .mobilemenu-content .sub-menu-level2 li.level3 > a {
   	color: #fff !important;
@@ -2196,11 +2204,12 @@ input.form-control {
   }
 
   .cat-dropdown .nav > li.level .megamenu {
-    left: 0 !important;
+    left: 0;
     background-color: transparent;
     padding: 0 40px;
     box-shadow: none;
     border: 0;
+    width: 250px;
   }
 
   .cat-dropdown .nav > li.level:hover .megamenu {
@@ -2440,10 +2449,19 @@ input.form-control {
     font-size: 26px;
 }
 
+  .nav.navbar-nav .header-search {
+    margin-bottom: 20px;
+  }
+
   .border-mobile {
     border: 1px solid #dee2e6
 
   }
+
+  .cat-dropdown .navbar-nav > li > a {
+    padding: 10px 15px 10px 15px;
+  }
+
   .cart_delete_wrap {
     position: absolute;
     top: 11px;
@@ -2451,7 +2469,7 @@ input.form-control {
   }
   .qty_wrap {
     position: absolute;
-    top: 274px;
+    top: 265px;
   }
 
   .cart_price_wrap, .cart_sum_wrap {
