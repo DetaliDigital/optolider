@@ -349,9 +349,23 @@ h2 {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
   }
+
+  #header .header-search input:focus {
+    color: #a1e2c8;
+  }
+
+  #header .form-control:focus {
+    color: #000 !important;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(161,226,200,1);
+}
+
+
   .header-search button {
       position: absolute;
-      top: 7px;
+      top: calc(50% - 15px);
       right: 22px;
       height: 30px;
       width: 30px;
@@ -1021,10 +1035,37 @@ clear: both;    font-weight: 600;    font-size: 12px;    color: #a9a9a9;    widt
 .header-column .btn.btn-catalog {margin-right: 0px;padding: 20px 27px 20px 24px;line-height: 20px;text-transform: uppercase;background-color: #3b7a61;color: #fff;font-size: 15px;border: 0;
 outline:none;border-radius: 0px;}
 
-.label-button {
+.btn.label-button {
     margin-right: 22px;
     padding: .57rem .75rem;
     color: #fff !important;
+}
+
+.btn.btn-catalog {
+    padding: 14px 0;
+}
+
+.mobile_menu {
+   list-style: none;
+   margin: 20px 0;
+   padding: 0 10px;
+}
+
+.mobile_menu > li {
+   padding: 5px 0;
+}
+
+.mobile_menu > li > a {
+   color: #fff;
+   font-weight: 600;
+}
+
+.menu-block-btn .label-button {
+    text-align:left;
+}
+
+.menu-block-btn .label-button span {
+    text-align:right;
 }
 
 .header-column .badge {padding: .25em .65em;text-transform:uppercase;}
@@ -2019,6 +2060,11 @@ input.form-control {
 }
 
 @media (max-width: 991px) {
+
+  .menu-slide-1 + .nav.navbar-nav {
+      display: none;
+  }
+
   .navbar-collapse.menu-open {
     left: 0;
     z-index: 10000;
