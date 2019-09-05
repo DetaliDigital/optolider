@@ -1018,8 +1018,6 @@ font-weight:600;font-size:12px;color:#a9a9a9;width:auto;height:auto;text-align:l
 .grid_item_style_2 .news_item_more {display:block;font-weight:600;font-size:15px;color:#3a9956;width:auto;height:auto;text-decoration:underline;background:none;text-align: left;}
 .grid_item_style_2 .news_item_more:hover {width:auto;height:auto;text-decoration:none;background:none;}
 
-.header-column .btn i {font-family: "Font Awesome 5 Free";color:#3c9e79;font-size: 20px;    margin-right: 10px !important;    vertical-align: middle;}
-
 /**/
 
 .news-card-item {}
