@@ -84,7 +84,10 @@ $('div.count').click(function(e){
 						 nav_icon.removeClass('fa-times');
 						 nav_icon.addClass('fa-bars');
 						 nav_icon.removeClass('fa-times');
+						 function pausemenufixed (){
 						 nav_body.removeClass('fixed');
+						 }
+						 setTimeout (pausemenufixed,200);
 						 nav_body.animate({
              left: '0px'
         		}, 200);
@@ -101,22 +104,62 @@ $('div.count').click(function(e){
 				 });
 	 		 	/* ---- For Navbar JS End ---- */
 
+		 /* ---- For Mobile Menu Slide JS Start ---- */
 
-	 /* ---- For Mobile Menu Dropdown JS Start ---- */
-		 $("#menu span.opener, #menu-main span.opener").on("click", function(){
-				 var menuopener = $(this);
-				 if (menuopener.hasClass("plus")) {
-						menuopener.parent().find('.mobile-sub-menu').slideDown();
-						menuopener.removeClass('plus');
-						menuopener.addClass('minus');
-				 }
-				 else
-				 {
-						menuopener.parent().find('.mobile-sub-menu').slideUp();
-						menuopener.removeClass('minus');
-						menuopener.addClass('plus');
-				 }
-				 return false;
+		 $(".btn-slide-1").on("click", function(){
+		 var menuslider = $(this);
+		 var nav_right = $('.menu-slide-1');
+		 var nav_left = $('.nav.navbar-nav');
+		 var title = $('.slide2_title');
+		 if (menuslider.hasClass('on')) {
+		 menuslider.removeClass('on');
+		 }
+		 else
+		 {
+		 title.removeClass('on');
+		 menuslider.addClass('on');
+		 nav_right.animate({
+		 right: '250px'
+	 	 }, 200);
+		 function pausemenuslide1 (){
+			 nav_right.addClass('d-none');
+       nav_left.addClass('menu-slide-2');
+			 nav_left.animate({
+			 left: '0px'
+			 }, 200);
+		 }
+		 setTimeout (pausemenuslide1,200);
+		 }
+		 return false;
 		 });
 
+		 $(".slide2_title").on("click", function(){
+			 var menuslider_retutn = $(this);
+			 var nav1_right = $('.nav.navbar-nav');
+			 var nav1_left = $('.menu-slide-1');
+			 var slide_1 = $(".btn-slide-1")
+			 if (menuslider_retutn.hasClass('on')) {
+			 menuslider_retutn.removeClass('on');
+			 }
+			 else
+			 {
+			 menuslider_retutn.addClass('on');
+			 slide_1.removeClass('on');
+			 nav1_right.animate({
+			 left: '-250px'
+		 	 }, 200);
+			 function pausemenuslide2 (){
+			 nav1_right.removeClass('menu-slide-2');
+			 nav1_left.removeClass('d-none');
+			 nav1_left.animate({
+			 right: '0'
+		 	 }, 200);
+			 }
+			 setTimeout (pausemenuslide2,200);
+			 }
+			 return false;
+		 });
+
+
+		 /* ---- For Mobile Menu Slide JS End ---- */
 });

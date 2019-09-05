@@ -1725,7 +1725,6 @@ input.form-control {
 
 .cat-dropdown .sidebar-contant ul li.level {
     float: none;
-	border-bottom: 1px solid #ebebeb;
 }
 .cat-dropdown .sidebar-contant ul li a img{
 	margin-right: 10px;
@@ -2061,9 +2060,24 @@ input.form-control {
 
 @media (max-width: 991px) {
 
+  .menu-slide-1 {
+    position: relative;
+  }
+
   .menu-slide-1 + .nav.navbar-nav {
       display: none;
+      position: relative;
+      left:-250px;
   }
+
+  .nav.navbar-nav.menu-slide-2 {
+    display: block;
+}
+
+  .nav.navbar-nav .slide2_title {
+    font-size: 18px;
+    margin-bottom: 0;
+}
 
   .navbar-collapse.menu-open {
     left: 0;
@@ -2161,7 +2175,6 @@ input.form-control {
   }
 
   .cat-dropdown .sidebar-contant ul li.level {
-  	border-bottom: 1px solid #3b7a61;
   }
 
   .cat-dropdown .navbar-nav > li > a i {
