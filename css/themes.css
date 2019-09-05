@@ -1030,7 +1030,7 @@ clear: both;    font-weight: 600;    font-size: 12px;    color: #a9a9a9;    widt
 .news-card-item .card-text {margin: 0;    display: block;    font-weight: 400;    font-size: 13px;    color: #1e1e1e;    line-height: 18px;    padding: 0 0 7px 0;margin-bottom: 10px;}
 .news-card-item .card-link {display: block;font-weight: 600;font-size: 15px;color: #3a9956;width: auto;height: auto;text-decoration: underline; background: none;text-align: left;}
 
-.header-column .btn.btn-catalog {margin-right: 0px;padding: 20px 27px 20px 24px;line-height: 20px;text-transform: uppercase;background-color: #3b7a61;color: #fff;font-size: 15px;border: 0;
+.header-column .btn.btn-catalog-header {margin-right: 0px;padding: 20px 27px 20px 24px;line-height: 20px;text-transform: uppercase;background-color: #3b7a61;color: #fff;font-size: 15px;border: 0;
 outline:none;border-radius: 0px;}
 
 .btn.label-button {
