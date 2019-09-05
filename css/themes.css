@@ -2435,6 +2435,11 @@ input.form-control {
 }
 
 @media (max-width: 576px) {
+
+  h1 {
+    font-size: 26px;
+}
+
   .border-mobile {
     border: 1px solid #dee2e6
 
