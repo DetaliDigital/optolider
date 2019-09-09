@@ -143,6 +143,10 @@ p {
   background-color: #4b9578;
 }
 
+.bg-success-2 {
+    background-color: #358b6a !important;
+}
+
 .bg-warning {
   background-color: #ffdc77 !important;
 }
@@ -2215,7 +2219,7 @@ input.form-control {
 } */
 .cat-dropdown .navbar-nav>li>a {
   display: inline-block;
-  padding: 10px 15px 10px 10px;
+  padding: 10px 15px 10px 25px;
   margin-right: 0px;
   /* color: #707070; */
   font-weight: 600;
@@ -2459,8 +2463,9 @@ input.form-control {
   font-size: 14px;
 }
 
-.megamenu .no-title .sub-menu-level2 li.level3>a {
+.megamenu .no-title .sub-menu-level2 li.level3> a,.megamenu .sub-menu-level2.no-title li.level3 > a  {
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .megamenu .sub-menu-level2 li.level3>a:hover {
@@ -2658,7 +2663,7 @@ input.form-control {
   .cat-dropdown .sidebar-contant ul li.level {}
 
   .cat-dropdown .navbar-nav>li>a i {
-    color: #fff;
+    color: #45b48b;
   }
 
   .cat-dropdown {
@@ -2691,37 +2696,38 @@ input.form-control {
     left: 0 !important;
   }
 
-  .menu-slide-2 .megamenu.mobile-sub-menu {
+  .menu-outer .megamenu.mobile-sub-menu {
     width: 250px;
   }
 
-  .menu-slide-2 .megamenu .level2>p {
+  .menu-outer .megamenu .level2>p {
     color: #fff;
   }
 
-  .menu-slide-2 {
+  .menu-outer {
     position: relative;
   }
 
-  .menu-slide-2 .megamenu {
+  .menu-outer .megamenu {
     padding: 0 !important;
   }
 
-  .menu-slide-2 .sub-menu-level1 {
+  .menu-outer .sub-menu-level1 {
     padding: 0 30px !important;
   }
 
-  .menu-slide-2 .slide2_title {
+  .menu-outer .slide2_title {
     font-size: 18px;
     margin-bottom: 0;
   }
 
-  .menu-slide-2 .mobile-sub-menu {
+  .menu-outer .mobile-sub-menu {
     position: relative;
     left: -250px;
   }
 
   /* Menu */
+
   .level2:hover {
     list-style: none !important;
   }
@@ -2929,7 +2935,7 @@ input.form-control {
   }
 
   .navbar-collapse {
-    background: #4b9578;
+    background: #36906e;
     bottom: 0;
     border-bottom: 0;
     display: inline-block !important;
@@ -2959,6 +2965,10 @@ input.form-control {
     display: none;
   }
 
+  .breadcrumb-item:first-child {
+    display: none;
+  }
+
   .breadcrumb-item+.breadcrumb-item {
     border: 1px solid #56a988;
     border-radius: 3px;
@@ -2981,7 +2991,7 @@ input.form-control {
 
 @media (max-width: 576px) {
   h1 {
-    font-size: 26px;
+    font-size: 24px !important;
   }
 
   .nav.navbar-nav .header-search {
