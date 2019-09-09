@@ -2961,7 +2961,11 @@ input.form-control {
   }
 
   /*Хлебные крошки */
-  .breadcrumb-item.breadcrumb-link-item, .breadcrumb-item.active {
+  .breadcrumb-item.breadcrumb-link-item {
+    display: none;
+  }
+
+  .breadcrumb-item.active {
     display: none;
   }
 
@@ -2969,7 +2973,11 @@ input.form-control {
     display: none;
   }
 
-  .breadcrumb-item+.breadcrumb-item {
+  .breadcrumb-item:nth-last-child(2) {
+    display: block !important;
+  }
+
+  .breadcrumb-item+.breadcrumb-item, .breadcrumb-item:nth-last-child(2) {
     border: 1px solid #56a988;
     border-radius: 3px;
     padding: .25rem .5rem;
@@ -2977,15 +2985,23 @@ input.form-control {
     color: #fff;
   }
 
-  .breadcrumb-item+.breadcrumb-item a {
+  .breadcrumb-item+.breadcrumb-item:hover, .breadcrumb-item:nth-last-child(2):hover {
     color: #fff;
+    background-color: #3b775f;
+    border-color: #3b775f;
   }
 
-  .breadcrumb-item+.breadcrumb-item::before {
+  .breadcrumb-item+.breadcrumb-item a, .breadcrumb-item:nth-last-child(2) > a  {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .breadcrumb-item+.breadcrumb-item::before, .breadcrumb-item:nth-last-child(2):before  {
     content: "\f104";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: #fff;
+    margin-right: 5px;
   }
 }
 
