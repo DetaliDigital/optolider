@@ -1458,6 +1458,10 @@ p {
   margin-bottom: 0;
 }
 
+.footer_contacts .icon-box .icon-box-info p a {
+  color:#888888;
+}
+
 .footer-top {}
 
 .footer-middle {}
@@ -3053,4 +3057,13 @@ input.form-control {
   .header_cart {
     padding: 12px 14px;
   }
+
+  .footer_contacts .icon-box {
+    margin: 20px 0;
+  }
+
+  .footer_contacts .icon-box:nth-child(2), .footer_contacts .icon-box:nth-child(3) {
+    margin-left: 25px;
+  }
+
 }
