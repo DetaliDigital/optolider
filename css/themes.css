@@ -110,6 +110,15 @@ body.fixed {
   position: fixed;
 }
 
+a {
+  color:#509579;
+}
+
+a:hover {
+  color:#3b7a61;
+  text-decoration: none;
+}
+
 h1 {
   font-size: 35px;
   font-weight: normal;
@@ -558,6 +567,10 @@ p {
 
 .header_top2row_logo {
   float: left;
+}
+
+.img-logo {
+  width:170px !important;
 }
 
 .header_top2row_logo a {
@@ -1054,6 +1067,52 @@ p {
   border-radius: 100%;
   top: 3px;
   left: 0;
+}
+
+.slick-arrow {
+    border: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-size: 0;
+    background: #fffaff;
+    border: 1px solid #56a988;
+    position: absolute;
+    top: calc(50% - 25px);
+    z-index: 10000;
+    }
+
+.slick-arrow:hover {
+    background: #56a988;
+    color: #fff;
+}
+
+.slick-next.slick-arrow {
+  right: -10px;
+}
+
+.slick-prev.slick-arrow {
+  left: -10px;
+}
+
+.slick-prev.slick-arrow::before {
+  content: '\f104';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+  color: #56a988;
+}
+
+.slick-next.slick-arrow::before {
+  content: '\f105';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+  color: #56a988;
+}
+
+.slick-arrow:hover:before {
+  color: #fff;
 }
 
 .secrets_ul_block {
@@ -3012,6 +3071,10 @@ input.form-control {
 @media (max-width: 576px) {
   h1 {
     font-size: 24px !important;
+  }
+
+  .carousel-item img {
+    width: 100%;
   }
 
   .nav.navbar-nav .header-search {
