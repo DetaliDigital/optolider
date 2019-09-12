@@ -1940,6 +1940,15 @@ input.form-control {
   display: block;
 }
 
+#menu .level > a {
+    color: #000;
+}
+
+#menu .level > a:hover {
+    color: #ffdc77;
+}
+
+
 #header .menu-open {
   display: block !important;
 }
@@ -2290,7 +2299,7 @@ input.form-control {
 } */
 .cat-dropdown .navbar-nav>li>a {
   display: inline-block;
-  padding: 10px 15px 10px 25px;
+  padding: 10px 15px 10px 15px;
   margin-right: 0px;
   /* color: #707070; */
   font-weight: 600;
@@ -2467,6 +2476,8 @@ input.form-control {
   width: 100%;
 }
 
+
+
 .nav>li.level:hover .megamenu {
   display: block;
 }
@@ -2615,6 +2626,10 @@ input.form-control {
 
 @media (max-width: 991px) {
 
+  #menu .level > a {
+      color: #fff;
+  }
+
   .img-logo {
     width: 50px !important;
 }
@@ -2641,7 +2656,8 @@ input.form-control {
   .navbar-collapse.menu-open {
     left: 0;
     z-index: 10000;
-  }
+    overflow-y: scroll;
+}
 
   .navbar-nav>li {
     float: none;
@@ -2776,7 +2792,7 @@ input.form-control {
     width: 250px;
   }
 
-  .menu-outer .megamenu .level2>p {
+  .menu-outer .megamenu .level2>p, .menu-outer .megamenu .level2 > p {
     color: #fff;
   }
 
@@ -2867,21 +2883,26 @@ input.form-control {
     padding: 0;
   }
 
-  .megamenu .level2>a {
-    position: relative;
-    margin-bottom: 2px;
-    color: #10502f;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: none;
+  .cat-dropdown .navbar-nav>li>a {
+    padding: 10px 15px 10px 25px;
   }
 
-  .megamenu .level2>a:before {
+  .megamenu .level2>a {
+    position: relative;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: none;
+    text-transform: uppercase;
+  }
+
+  /*.megamenu .level2>a:before {
     content: "";
     font-family: FontAwesome;
     position: absolute;
     left: -11px;
-  }
+  }*/
 
   .megamenu .sub-menu-level2 li.level3>a {
     color: #ffffff !important;
@@ -3104,6 +3125,7 @@ input.form-control {
 
   .carousel-control-prev, .carousel-control-next {
     display: none;
+
   }
 
   .nav.navbar-nav .header-search {
