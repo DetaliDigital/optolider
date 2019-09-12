@@ -3098,6 +3098,14 @@ input.form-control {
     width: 574px;
   }
 
+  .carousel-indicators {
+    display: none;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    display: none;
+  }
+
   .nav.navbar-nav .header-search {
     margin-bottom: 20px;
   }
