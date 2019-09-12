@@ -1884,6 +1884,10 @@ textarea.form-control {
   padding: 0.2rem .75rem;
 }
 
+.input-group-text:hover {
+  color: #f8492e;
+}
+
 .input-group-text.input-group-prepend {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -1892,6 +1896,10 @@ textarea.form-control {
 .input-group-text.input-group-append {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+
+.input-group-text.input-group-append:hover,.input-group-text.input-group-prepend {
+cursor: pointer;
 }
 
 .qty_wrap input.form-control {
