@@ -1898,8 +1898,8 @@ textarea.form-control {
   border-top-left-radius: 0;
 }
 
-.input-group-text.input-group-append:hover,.input-group-text.input-group-prepend {
-cursor: pointer;
+.input-group-text.input-group-append:hover, .input-group-text.input-group-prepend {
+  cursor: pointer;
 }
 
 .qty_wrap input.form-control {
@@ -1940,14 +1940,13 @@ input.form-control {
   display: block;
 }
 
-#menu .level > a {
-    color: #000;
+#menu .level>a {
+  color: #000;
 }
 
-#menu .level > a:hover {
-    color: #ffdc77;
+#menu .level>a:hover {
+  color: #ffdc77;
 }
-
 
 #header .menu-open {
   display: block !important;
@@ -2229,6 +2228,8 @@ input.form-control {
 
 .box-catalog:hover .cat-dropdown {
   display: block;
+  position: relative;
+  top: -2px;
 }
 
 .btn-sidebar-menu-dropdown .fa {
@@ -2476,8 +2477,6 @@ input.form-control {
   width: 100%;
 }
 
-
-
 .nav>li.level:hover .megamenu {
   display: block;
 }
@@ -2625,14 +2624,13 @@ input.form-control {
 }
 
 @media (max-width: 991px) {
-
-  #menu .level > a {
-      color: #fff;
+  #menu .level>a {
+    color: #fff;
   }
 
   .img-logo {
     width: 50px !important;
-}
+  }
 
   .menu-slide-1 {
     position: relative;
@@ -2657,7 +2655,7 @@ input.form-control {
     left: 0;
     z-index: 10000;
     overflow-y: scroll;
-}
+  }
 
   .navbar-nav>li {
     float: none;
@@ -2792,7 +2790,7 @@ input.form-control {
     width: 250px;
   }
 
-  .menu-outer .megamenu .level2>p, .menu-outer .megamenu .level2 > p {
+  .menu-outer .megamenu .level2>p, .menu-outer .megamenu .level2>p {
     color: #fff;
   }
 
@@ -2903,7 +2901,6 @@ input.form-control {
     position: absolute;
     left: -11px;
   }*/
-
   .megamenu .sub-menu-level2 li.level3>a {
     color: #ffffff !important;
   }
@@ -3125,7 +3122,6 @@ input.form-control {
 
   .carousel-control-prev, .carousel-control-next {
     display: none;
-
   }
 
   .nav.navbar-nav .header-search {
@@ -3179,4 +3175,8 @@ input.form-control {
   .footer_contacts .icon-box:nth-child(2), .footer_contacts .icon-box:nth-child(3) {
     margin-left: 25px;
   }
+}
+
+@media (max-width: 1040px) {
+  
 }
