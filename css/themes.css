@@ -1501,6 +1501,7 @@ p {
 
 .action-section {}
 
+
 .catalog-section-head {
   margin-bottom: 10px;
   background: url(../img/grey_line.png) repeat-x 0 center;
@@ -2674,6 +2675,40 @@ input.form-control {
 }
 
 
+/* Опции */
+
+.section-option h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.section-option .list-group-item {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.section-option .list-group-item {
+  position: relative;
+  font-size: 13px;
+  vertical-align: middle;
+  background: url(images/dott.png) 0 18px repeat-x;
+  width: 70%;
+}
+
+.section-option .list-group-item span {
+    background-color: #fff;
+    padding-right: 10px;
+}
+
+.section-option .list-group-item span+span {
+    text-align: right;
+    color: #000;
+    background-color: #fff;
+    padding-left: 10px;
+}
+
+/* Опции */
+
 @media (max-width: 1040px) {
 
   #menu .level>a {
@@ -3203,5 +3238,9 @@ input.form-control {
 
   .footer_contacts .icon-box:nth-child(2), .footer_contacts .icon-box:nth-child(3) {
     margin-left: 25px;
+  }
+
+  .section-option .list-group-item {
+    width: 100%;
   }
 }

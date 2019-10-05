@@ -259,5 +259,12 @@ $(document).ready(function() {
 
   /* ---- For Mobile Menu Slide JS End ---- */
 
+  /* ---- Add class active tabs JS Start ---- */
+
+  $("#myTab li:first").addClass("active");
+  $("#myTabContent div:first").addClass("show active");
+
+
+  /* ---- Add class active tabs JS End ---- */
 
 });
