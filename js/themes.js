@@ -262,6 +262,7 @@ $(document).ready(function() {
   /* ---- Add class active tabs JS Start ---- */
 
   $("#myTab li:first").addClass("active");
+  $("#myTab li:first > a").addClass("active");
   $("#myTabContent div:first").addClass("show active");
 
 
