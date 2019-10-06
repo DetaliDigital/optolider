@@ -10,7 +10,6 @@ $(document).ready(function() {
     } else if ($(this).hasClass("minus")) {
       count = count - 1;
     }
-    count = (count > 1) ? count : 1;
 
     $input.val(count);
     $input.change();
@@ -41,6 +40,17 @@ $(document).ready(function() {
 
     }
   });
+
+	miniShop2.Callbacks.Cart.change.before = function() {
+		var $field = $(miniShop2.sendData.$form[0]).find(miniShop2.Cart.countInput);
+		var count = +$field.val();
+		if (count < 1) {
+			$field.val('1');
+			miniShop2.Message.error('Ошибка! Нельзя ставить кол-во меньше 1!');
+			return false;
+		}
+		return true;
+	}
 
   $(document).on('change', '[name="region"]', function() {
     if ($('[name="region"]:checked').attr('id') == 'delivery_moscow') {
@@ -267,5 +277,17 @@ $(document).ready(function() {
 
 
   /* ---- Add class active tabs JS End ---- */
+
+  /* ---- Gallery JS Start ---- */
+
+  if ($(window).width() < 576) {
+    $('.desktop').remove();
+  }
+  else {
+    $('.zoom-section').addClass('vertical-zoom');
+    $('.mobile').remove();
+  }
+
+  /* ---- Gallery JS End ---- */
 
 });
