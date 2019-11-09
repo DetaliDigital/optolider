@@ -134,16 +134,22 @@ $(document).ready(function() {
   });
 
   /* ---- For Navbar JS Start ---- */
-  $('.navbar-toggle').on("click", function() {
+  $('.navbar-toggle.menu-toggle').on("click", function() {
     var menu_id = $('#menu');
-    var nav_icon = $('.navbar-toggle i');
+    var toggle_id = $('#menu-toggle')
+    var filter_id = $('#filter');
+    var nav_icon = $('.navbar-toggle.menu-toggle i');
+    var filter_icon = $('.navbar-toggle.filter-toggle i');
     var nav_body = $('body');
-    if (menu_id.hasClass('menu-open')) {
+    if (menu_id.hasClass('menu-open') || $(this).hasClass('filter_open_toogle')) {
       menu_id.removeClass('menu-open');
       nav_icon.removeClass('fa-times');
       nav_icon.addClass('fa-bars');
       nav_icon.removeClass('fa-times');
-
+      filter_icon.show();
+      filter_icon.addClass('fa-filter');
+      filter_id.removeClass('filter-open');
+      toggle_id.removeClass('filter_open_toogle');
       function pausemenufixed() {
         nav_body.removeClass('fixed');
       }
@@ -155,6 +161,7 @@ $(document).ready(function() {
       menu_id.addClass('menu-open');
       nav_icon.addClass('fa-times');
       nav_icon.removeClass('fa-bars');
+      filter_icon.hide();
       nav_body.addClass('fixed');
       nav_body.animate({
         left: '250px'
@@ -289,5 +296,42 @@ $(document).ready(function() {
   }
 
   /* ---- Gallery JS End ---- */
+
+  /* ---- For Filterbar JS Start ---- */
+  $('.navbar-toggle.filter-toggle').on("click", function() {
+    var filter_id = $('#filter');
+    var nav_icon = $('.navbar-toggle.menu-toggle i');
+    var filter_icon = $('.navbar-toggle.filter-toggle i');
+    var action_buttom = $('.navbar-toggle.menu-toggle');
+    var nav_body = $('body');
+    if (filter_id.hasClass('filter-open')) {
+      filter_id.removeClass('filter-open');
+      filter_icon.removeClass('fa-times');
+      filter_icon.addClass('fa-filter');
+      nav_icon.removeClass('fa-times');
+      nav_icon.addClass('fa-bars');
+
+      function pausemenufixed() {
+        nav_body.removeClass('fixed');
+      }
+      setTimeout(pausemenufixed, 200);
+      nav_body.animate({
+        left: '0px'
+      }, 200);
+    } else {
+      filter_id.addClass('filter-open');
+      nav_icon.addClass('fa-times');
+      filter_icon.hide();
+      filter_icon.removeClass('fa-filter');
+      nav_icon.removeClass('fa-bars');
+      action_buttom.addClass('filter_open_toogle');
+      nav_body.addClass('fixed');
+      nav_body.animate({
+        left: '250px'
+      }, 200);
+    }
+    return false;
+  });
+
 
 });
