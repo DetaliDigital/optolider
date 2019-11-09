@@ -3522,6 +3522,16 @@ input.form-control {
     z-index: 4;
   }
 
+  .navbar-collapse.filter-collapse {
+    left: -250px;
+    background: #f8f8f8;
+  }
+
+  .navbar-collapse.filter-collapse.filter-open {
+    left: 0px;
+    overflow-y: scroll;
+  }
+
   .header-bottom-bar.d-hidden {
     visibility: hidden;
     position: absolute;
@@ -3562,12 +3572,10 @@ input.form-control {
     padding: 20px;
   }
 
+  .mse2_custom {
+    margin-top: 0px !important;
 }
 
-@media (max-width: 330px) {
-  .carousel-item img {
-    width: 480px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -3699,20 +3707,55 @@ input.form-control {
 
 }
 
+@media (max-width: 330px) {
+  .carousel-item img {
+    width: 480px;
+  }
+}
+
 /*Фильтр Cтарт */
 .mse2_custom {
       background: #f8f8f8;
+      margin-top: 85px;
 }
 
 .mse2_custom h4 {
-      text-transform: capitalize;
-      font-size: 18px;
+      text-transform: none;
+      font-size: 16px;
+      overflow: hidden;
+}
+
+.mse2_custom h4::before, .mse2_custom h4::after
+{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1px;
+    background:#eaeaea;
+    border: solid #f8f8f8;
+    border-width: 0 10px;
+}
+
+.mse2_custom h4::before {
+    margin-left: -100%;
+}
+
+.mse2_custom h4::after {
+    margin-right: -100%;
+}
+
+.mse2_custom .item_filter img {
+  width: 18px;
+  height: 18px;
 }
 
 .mse2_custom .item_filter {
       font-size: 14px;
       font-weight: 600;
       display: flex;
+      align-items: center;
       font-weight: 400;
 }
 
@@ -3733,8 +3776,12 @@ input.form-control {
 }
 
 .ui-slider .ui-slider-handle {
-    width: 1.3em !important;
-    height: 1.3em !important;
+    margin-top: -2px!important;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 1.5em !important;
+    height: 1.5em !important;
 }
 
 .ui-slider .ui-slider-range {
