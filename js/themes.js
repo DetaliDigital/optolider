@@ -147,7 +147,7 @@ $(document).ready(function() {
       nav_icon.addClass('fa-bars');
       nav_icon.removeClass('fa-times');
       filter_icon.show();
-      filter_icon.addClass('fa-filter');
+      filter_icon.addClass('fa-sliders-h');
       filter_id.removeClass('filter-open');
       toggle_id.removeClass('filter_open_toogle');
       function pausemenufixed() {
@@ -322,7 +322,7 @@ $(document).ready(function() {
       filter_id.addClass('filter-open');
       nav_icon.addClass('fa-times');
       filter_icon.hide();
-      filter_icon.removeClass('fa-filter');
+      filter_icon.removeClass('fa-sliders-h');
       nav_icon.removeClass('fa-bars');
       action_buttom.addClass('filter_open_toogle');
       nav_body.addClass('fixed');

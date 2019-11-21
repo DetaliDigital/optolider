@@ -595,7 +595,7 @@ p {
 
 /*Поиск*/
 .ui-widget-content {
-  z-index: 10000 !important;
+  z-index: 80 !important;
 }
 
 #header .header-search input {
@@ -976,8 +976,8 @@ p {
   width: 24px;
 }
 
-.main .flags img {
-  weight: 24px;
+.main #msProduct .flags img {
+  width: 24px;
   margin-left: 5px;
 }
 
@@ -2351,7 +2351,7 @@ input.form-control {
 .navbar-toggle {
   background: none;
   border: none;
-  width: 50px;
+  margin-right: 5px;
 }
 
 .navbar-toggle i {
@@ -2482,7 +2482,7 @@ input.form-control {
   background-color: #f8f8f8;
   position: absolute;
   width: 100%;
-  z-index: 10000;
+  z-index: 100;
 }
 
 .nav.navbar-nav {
@@ -3026,6 +3026,23 @@ input.form-control {
   border: 1px solid transparent;
 }
 
+.catalog_0718 .prod_item.list:hover {
+  border: 3px solid #eaeaea;
+}
+
+.list .product-info .list-group-item {
+    padding: 0.3rem 0.3rem !important;
+    font-size: 90%;
+}
+
+.h-divider{
+ margin-top:5px;
+ margin-bottom:5px;
+ height:1px;
+ width:100%;
+ border-left:1px solid gray;
+}
+
 }
 
 @media (max-width: 991px) {
@@ -3125,14 +3142,18 @@ input.form-control {
 
   .catalog_0718 .prod_item .flags {
     left: 0px;
-    position: relative;
+    position: absolute;
+    bottom: -5px;
     padding-left: 0;
     margin-left: 0;
+    align-items: end;
+    align-items: flex-end;
     }
 
-  .catalog_0718 .prod_item .flags img, {
+  .catalog_0718 .prod_item .flags img {
   margin-left: 5px;
   width: 20px;
+  height: 20px;
   }
 
 
@@ -3162,7 +3183,7 @@ input.form-control {
 
   .navbar-collapse.menu-open {
     left: 0;
-    z-index: 10000;
+    z-index: 100;
     overflow-y: scroll;
   }
 
@@ -3621,6 +3642,14 @@ input.form-control {
     font-size: 24px !important;
   }
 
+  .page-item:first-child {
+    display: none;
+}
+
+.page-item:last-child {
+  display: none;
+}
+
   /*
   .carousel-item img {
     width: 100%;
@@ -3754,7 +3783,7 @@ input.form-control {
 /*Фильтр Cтарт */
 .mse2_custom {
       background: #f8f8f8;
-      margin-top: 85px;
+      margin-top: 80px;
 }
 
 .mse2_custom h4 {
@@ -3853,3 +3882,24 @@ input.form-control {
   color: #fff;
 }
 /*Фильтр Финиш */
+
+/*Спасибо за заказ*/
+
+.finish_banner {
+    font-family: "Open Sans", sans-serif;
+    height: 485px;
+    clear: both;
+    background-color: #f6f6f6;
+    background-image: url(../img/finish_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+/*Cпасибо за заказ*/
+
+/*Галлерея фикс */
+
+#wrap {
+    z-index: 70 !important;
+}
+/*/Галлерея фикс */
