@@ -2787,9 +2787,6 @@ input.form-control {
   text-transform: uppercase;
 }
 
-.megamenu .sub-menu-level2 li.level3>a:hover {
-  color: #4b9578 !important;
-}
 
 .megamenu .sub-menu-level2 li.level3>a span {
   float: left;
@@ -3034,6 +3031,11 @@ input.form-control {
     padding: 0.3rem 0.3rem !important;
     font-size: 90%;
 }
+
+.megamenu .sub-menu-level2 li.level3>a:hover {
+  color: #4b9578 !important;
+}
+
 
 .h-divider{
  margin-top:5px;
@@ -3903,3 +3905,19 @@ input.form-control {
     z-index: 70 !important;
 }
 /*/Галлерея фикс */
+
+/*Промо фикс */
+
+.mspc2-discount-amount {
+    font-size: 14px;
+    color: #7e7e7e;
+    font-weight: 600;
+}
+
+.mspc2-discount-amount span {
+    font-size: 1.25rem;
+    color: #000;
+    font-weight: 700 !important;
+}
+
+/*Промо фикс */
