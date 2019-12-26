@@ -3926,3 +3926,9 @@ input.form-control {
     border: 1px solid #c5c5c5;
     z-index: 5000 !important;
 }
+
+/*Фильтр фикс */
+#mse2_filters .mse2_number_slider {
+    position: relative;
+    z-index: 1 !important;
+}
