@@ -3939,10 +3939,6 @@ input.form-control {
 }
 
 /*Фильтр фикс */
-#mse2_filters .mse2_number_slider {
-    position: relative;
-    z-index: 1 !important;
-}
 
 .mse2-ac-wrapper .intro {
   margin-top: 5px;
@@ -4003,17 +3999,6 @@ a.ui-button:active,
   border-bottom: 1px solid #dee2e6;
 }
 
-@media screen and (max-width: 600px) {
-.ui-widget.ui-widget-content {
-    left: 0 !important;
-    margin: 0;
-        margin-top: 0px;
-    margin-top: 15px;
-    width: 100% !important;
-    padding-bottom: 30px;
-    top: 168px !important;
-}
-}
 
 /*Боковое меню */
 
