@@ -3865,6 +3865,7 @@ input.form-control {
 
 .ui-slider .ui-slider-range {
     background: #56a988;
+    height: 7px !important;
 }
 
 .number_form.first {
