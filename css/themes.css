@@ -4005,12 +4005,32 @@ a.ui-button:active,
 .menu_left_bar .nav-item {
 
 }
+
+.fas.fa-arrow-left.mr-3.text-success:hover {
+    color:#ffc44a !important;
+}
+
 .menu_left_bar .nav-item a {
   color: #212529;
   font-size: 13px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.menu_left_bar .nav-item.active a {
+  font-weight: 800;
+  color: #358f6c;
+  font-size: 13px;
+}
+
+.menu_left_bar .nav-item a:hover  {
+  color: #358f6c;
+}
+
+.menu_left_bar .nav-item a span:hover  {
+  color: #358f6c;
+}
+
 .menu_left_bar .nav-item a span {
   color: #212529;
   font-size: 12px;
