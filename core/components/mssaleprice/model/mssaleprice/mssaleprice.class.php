@@ -3,16 +3,16 @@
 class msSalePrice
 {
     public $version = '1.2.2-beta';
-	
+
     /** @var modX $modx */
     public $modx;
 
     /** @var miniShop2 $miniShop2 */
     public $ms2;
-	
+
     /** @var pdoFetch $pdoTools */
     public $pdoTools;
-	
+
     /** @var array $initialized */
     public $initialized = array();
 
@@ -49,7 +49,7 @@ class msSalePrice
 				}
 			}*/
 		}
-		
+
         $connectorUrl = $assetsUrl . 'connector.php';
 
         $this->config = array_merge(array(
@@ -66,7 +66,7 @@ class msSalePrice
             'chunkSuffix' => '.chunk.tpl',
             'snippetsPath' => $corePath . 'elements/snippets/',
             'processorsPath' => $corePath . 'processors/',
-			
+
             'ctx' => 'web',
             'json_response' => false,
             'prepareResponse' => true,
@@ -75,7 +75,7 @@ class msSalePrice
 
         $this->modx->addPackage('mssaleprice', $this->config['modelPath']);
         $this->modx->lexicon->load('mssaleprice:default');
-		
+
         $this->ms2 = $modx->getService('miniShop2');
         $this->pdoTools = $this->ms2->pdoTools;
         if (!($this->ms2 instanceof miniShop2)) {
@@ -100,7 +100,7 @@ class msSalePrice
         $this->config['ctx'] = $ctx;
 
         $this->ms2->initialize($ctx, array('json_response' => $this->config['json_response']));
-		
+
         //if ($ctx != 'mgr' && (!defined('MODX_API_MODE') || !MODX_API_MODE)) {
         if ($ctx != 'mgr') {
 
@@ -109,7 +109,7 @@ class msSalePrice
 
         return true;
     }
-	
+
 	/**
      * This method loads the css and js
      *
@@ -126,7 +126,7 @@ class msSalePrice
 		$this->modx->regClientScript(
 			'<script type="text/javascript">msSalePriceConfig = ' . $data . ';</script>', true
 		);
-		
+
         // Register CSS
 		$css = trim($this->modx->getOption('mssaleprice_frontend_css'));
 		if (!empty($css) && preg_match('/\.css/i', $css)) {
@@ -135,7 +135,7 @@ class msSalePrice
 			}
 			$this->modx->regClientCSS($this->config['cssUrl']. 'web/'.$css);
 		}
-		
+
 		// Register JS
 		$js = trim($this->modx->getOption('mssaleprice_frontend_js'));
 		if (!empty($js) && preg_match('/\.js/i', $js)) {
@@ -144,7 +144,7 @@ class msSalePrice
 			}
 			$this->modx->regClientScript($this->config['jsUrl']. 'web/'.$js);
 		}
-		
+
     }
 
 	/**
@@ -206,7 +206,7 @@ class msSalePrice
 
         return $value;
     }
-	
+
 	/**
      * This method return on product price for mssp
      *
@@ -224,7 +224,7 @@ class msSalePrice
 		elseif ($product instanceof msProductData) {
 			$product = $product->getOne('Product');
 		}
-		
+
 		if (!$product OR !($product instanceof msProduct)) {
 			return $this->error('mssaleprice_msproduct_nf');
 		}
@@ -238,7 +238,7 @@ class msSalePrice
         //$this->modx->log(xPDO::LOG_LEVEL_ERROR,'getPrice data: '.print_r($data, 1));
 
 		$data = array_merge($product->toArray(), $data, array('msoptionsprice_reload' => true));
-		
+
         $response = $this->ms2->invokeEvent('msspOnBeforeGetPrice', array(
             'product'	=> $product,
             'rid'		=> $product->get('id'),
@@ -247,10 +247,10 @@ class msSalePrice
         ));
         if (!$response['success'])
             return $this->error($response['message']);
-        
+
 		$count = $response['data']['count'];
 		$data = $response['data']['data'];
-		
+
         $default_price = $product->getPrice($data);
 
         $msop_modification = (array)$this->modx->getPlaceholder('_mssp_msop');
@@ -284,12 +284,12 @@ class msSalePrice
 
 		if( $mssp = $this->modx->getObject('msspPrice', $q) ){
 			$mssp_price = $this->ms2->formatPrice($this->getPriceByType($mssp->get('type'), $mssp->get('price'), $default_price));
-			$output = array( 
+			$output = array(
 				'rid'		=>	$product->get('id'),
 				'price'		=>	$mssp_price,
 				'old_price'	=>	$default_price,
 			);
-			
+
 		    $data['price'] = $mssp_price;
             /*
     		$params = array(
@@ -301,19 +301,19 @@ class msSalePrice
             $_SESSION['discontrol']['stop'] = 1;
     		$response = $this->ms2->invokeEvent('msOnGetProductPrice', $params);
             $_SESSION['discontrol']['stop'] = 0;
-			
+
     		if ($response['success']) {
     			$output['price'] = $response['data']['price'];
     		}*/
 		}
 		else{
-			$output = array( 
+			$output = array(
 				'rid'		=>	$product->get('id'),
 				'price'		=>	$default_price,
 				'old_price'	=>	$product->get('old_price'),
 			);
 		}
-		
+
         $response = $this->ms2->invokeEvent('msspOnAfterGetPrice', array(
             'product'	=> $product,
             'rid'		=> $product->get('id'),
@@ -327,12 +327,12 @@ class msSalePrice
         }
 		$output['price'] = $response['data']['price'];
 		$output['old_price'] = $response['data']['old_price'];
-		$output['old_price'] = ($output['price'] >== $output['old_price']) ? 0 : $output['old_price'];
+		$output['old_price'] = ($output['price'] >= $output['old_price']) ? 0 : $output['old_price'];
 		if (isset($response['data']['options'])) {
 		    $output['options'] = $response['data']['options'];
         }
         $this->modx->setPlaceholder('_mssp_msop', null);
-		
+
 		return $this->success('', $output);
 	}
 
