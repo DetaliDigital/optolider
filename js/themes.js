@@ -335,3 +335,26 @@ $(document).ready(function() {
 
 
 });
+function allSearch() {
+
+    document.getElementById('mse2_form').submit();
+
+}
+
+
+function counter_minus(id) {
+    // console.log(item.data('id'));
+    // console.log(id);
+    var input = document.getElementById('count-' + id);
+    if(parseInt(input.value) > 1 )
+    {
+        input.value = parseInt(input.value) - 1;
+    }
+}
+
+function counter_plus(id) {
+    // console.log(item.data('id'));
+    // console.log(id);
+    var input = document.getElementById('count-' + id);
+    input.value = parseInt(input.value) + 1;
+}
