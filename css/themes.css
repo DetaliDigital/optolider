@@ -41,65 +41,62 @@
 .icon-dom-dacha:before {
   content: "\e900";
 }
-
 .icon-deti:before {
   content: "\e901";
 }
-
 .icon-chasi:before {
   content: "\e902";
 }
-
 .icon-avto:before {
   content: "\e903";
 }
-
 .icon-electronika:before {
   content: "\e904";
 }
-
 .icon-krasota-figura:before {
   content: "\e905";
 }
-
 .icon-leto:before {
   content: "\e906";
 }
-
 .icon-letter:before {
   content: "\e907";
 }
-
 .icon-noviy-god:before {
   content: "\e908";
 }
-
 .icon-odejda:before {
   content: "\e909";
 }
-
 .icon-phone:before {
   content: "\e90a";
 }
-
 .icon-place:before {
   content: "\e90b";
 }
-
 .icon-sport:before {
   content: "\e90c";
 }
-
 .icon-sumki:before {
   content: "\e90d";
 }
-
 .icon-toys:before {
   content: "\e90e";
 }
-
 .icon-tv-tovari:before {
   content: "\e90f";
+}
+.icon-new_icon:before {
+  content: "\e910";
+}
+.icon-odnostranichnikam_icon:before {
+  content: "\e911";
+}
+.icon-popular_icon:before {
+  content: "\e912";
+}
+.icon-sale_icon:before {
+  content: "\e913";
 }
 
 * {
@@ -3984,6 +3981,13 @@ a.ui-button:active,
 
 .mse2-ac-wrapper .intro .badge {
   font-weight: 400;
+  font-size: 11px;
+  border-radius: 2px;
+}
+
+.mse2-ac-wrapper .intro .badge i {
+  font-size: 11px;
+  color: #fff;
 }
 
 .mse2-ac-wrapper .btn_more {
@@ -3999,6 +4003,18 @@ a.ui-button:active,
   border-bottom: 1px solid #dee2e6;
 }
 
+.mse2-ac-wrapper.ui-menu-item {
+  border-left: 4px solid #fff;
+}
+
+.mse2-ac-wrapper.ui-menu-item:hover {
+  border-left: 4px solid #ffdc7f;
+}
+
+.mse2-ac-wrapper .intro small {
+  color: #141414 !important;
+  font-size: 11px !important;
+}
 
 /*Боковое меню */
 
@@ -4036,3 +4052,217 @@ a.ui-button:active,
   font-size: 12px;
 }
 /* / Боковое меню */
+
+/* Новая версия таба */
+
+.section-tabs .nav-tabs {
+  background-color: unset;
+  border-bottom: unset;
+  padding-top: 20px;
+}
+
+.section-tabs .nav-tabs a {
+  color: #9e9e9e;
+  font-size: 15px;
+  text-transform: none;
+  padding: 10px 20px;
+}
+
+.section-tabs .nav-tabs .nav-item.show .nav-link, .section-tabs .nav-tabs .nav-link.active {
+  border-bottom: 0;
+  text-transform: none;
+  font-size: 15px;
+  background: #fff;
+  padding: 10px 20px;
+}
+
+.section-tabs p, .section-tabs li {
+  font-size: 13px;
+}
+
+.section-tabs h2 {
+  font-size: 17px;
+  text-transform: none;
+}
+
+.section-tabs .list-box {
+  list-style: none;
+  counter-reset: li;
+  padding-left: 0px;
+}
+
+.section-tabs .list-box li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.section-tabs .list-box li::before {
+  content: counter(li);
+  counter-increment: li;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  background-color: #ffe9ad;
+  color: #d3b35f;
+  font-weight: 600;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+}
+
+.section-tabs .list-contact {
+  list-style: none;
+}
+
+.section-tabs .list-contact li {
+  display: flex;
+  align-items: center;
+}
+
+.section-tabs .list-contact .box-icon {
+  background-color: #ffe9ad;
+  color: #d3b35f;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.list-cart-price.price-white li:first-child {
+  border-top: none;
+}
+
+.list-cart-price.price-white li {
+  background-color: #fff;
+  border: none;
+  border-top: 1px solid rgba(0,0,0,.100);
+}
+
+.sale-block span {
+  font-size: 14px;
+}
+
+.section-advantage .card-body {
+  font-size: 13px;
+}
+
+.section-advantage .card-body i {
+  font-size: 25px;
+  color: #56a988;
+}
+
+.section-about img {
+  width: 150px;
+}
+
+.section-tabs .alert {
+  font-size: 11px;
+}
+
+.section-tabs .card p.h4 {
+  font-size: 16px;
+}
+
+.section-tabs .card p {
+  font-size: 12px;
+}
+
+.section-tabs i {
+  font-size: 14px;
+}
+
+.section-tabs .bd-callout {
+  font-size: 13px;
+}
+
+.section-tabs .card-product-custom {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.section-tabs .card-product-custom .card-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-tabs .card-product-custom .card-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.section-tabs .product {
+  cursor: pointer;
+  transition: 2s linear all;
+}
+
+.section-tabs .product:hover .card-img-overlay  {
+  -moz-transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s,opacity 2s;
+  visible:hidden;
+  display: none !important;
+
+}
+
+.section-tabs .ship h2 {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 79px;
+    background: url(../img/drop/ship.png) no-repeat center -10px;
+}
+
+.section-tabs .ship h2 {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 79px;
+    background: url(../img/drop/ship.png) no-repeat center -10px;
+}
+
+.section-tabs .card .img-check {
+  width: 85px;
+}
+
+
+/* / Новая версия таба */
+
+/* Новая версия таба */
+/* / Новая версия таба */
+
+/* / Шаблон категории*/
+
+.category.submenu {
+  font-size: 12px;
+  color: #5ca989;
+  list-style: none;
+  padding: 0 20px;
+}
+
+.category.submenu li {
+  font-size: 11px;
+  line-height: 13px;
+  margin: 5px 0;
+}
+
+.p-cat-item.category-item-hover:hover .sub-menu-block {
+  display:flex !important;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.btn.btn-success.btn-category-custom {
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 0;
+}
+
+/* / Шаблон категории */
