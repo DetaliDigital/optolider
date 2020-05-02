@@ -58,22 +58,35 @@ $(document).ready(function() {
       $("#delivery_4").show();
       $("#delivery_1").hide();
       $("#delivery_3").hide();
+      $("#delivery_5").hide();
       $("#city").hide();
-
     }
     if ($('[name="region"]:checked').attr('id') == 'delivery_spb') {
       $("#delivery_2").hide();
       $("#delivery_1").show();
       $("#delivery_3").show();
       $("#delivery_4").hide();
+      $("#delivery_5").hide();
       $("#city").hide();
 
     }
+
+    if ($('[name="region"]:checked').attr('id') == 'delivery_ekb') {
+      $("#delivery_1").hide();
+      $("#delivery_2").hide();
+      $("#delivery_3").hide();
+      $("#delivery_4").show();
+      $("#delivery_5").show();
+      $("#city").hide();
+
+    }
+
     if ($('[name="region"]:checked').attr('id') == 'delivery_region') {
       $("#delivery_1").hide();
       $("#delivery_2").hide();
       $("#delivery_3").hide();
       $("#delivery_4").show();
+      $("#delivery_5").hide();
       $("#city").show();
     }
   })
@@ -103,8 +116,6 @@ $(document).ready(function() {
         });
 
   }
-
-
 
   $('.product_slider').slick({
     dots: false,
@@ -332,6 +343,46 @@ $(document).ready(function() {
     }
     return false;
   });
+
+  // =====================================================
+  //     Дополнительная конфигурация карусели
+  // =====================================================
+
+  if ($(window).width() < 1170) {
+      if ($(".category-slick").length) {
+    var categorySlick = $(".category-slick").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        slide: ".category-item",
+        respondTo:'slider',
+        swipeToSlide: true,
+        variableWidth: true,
+        touchThreshold: 25,
+        centerMode:false,
+        responsive: [
+        {
+          breakpoint: 1023,
+          settings: {
+              slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+           variableWidth: true,
+           slidesToShow: 2,
+           centerMode:false,
+           arrows: false,
+           dots: true
+          }
+        }
+      ]
+      });
+    }
+  }
+
 });
 
 function allSearch() {
@@ -362,6 +413,6 @@ $('.showcase_slider').slick({
   slidesToScroll: 1,
   centerMode:false,
   arrows: false,
-  dots: true
+  dots: false,
 });
 }
