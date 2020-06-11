@@ -1196,6 +1196,7 @@ p {
   top: -1px;
   left: -1px;
   width: 100%;
+  min-height:100%;
   width: calc(100% + 2px);
   position: absolute;
   padding: 20px 20px 0px 20px;
@@ -3060,7 +3061,14 @@ input.form-control {
 }
 
 @media (min-width: 992px) {
-
+.mse2_custom h4::before, .mse2_custom h4::after
+{
+    display:none!important;
+}
+.bord
+{
+    border-right:0px!important;
+}
 .catalog_0718 .prod_item:hover {
   border: 1px solid transparent;
 }
@@ -3833,7 +3841,6 @@ input.form-control {
 .mse2_custom h4 {
       text-transform: none;
       font-size: 16px;
-      overflow: hidden;
 }
 
 .mse2_custom h4::before, .mse2_custom h4::after
@@ -4101,6 +4108,22 @@ a.ui-button:active,
   font-size: 15px;
   text-transform: none;
   padding: 10px 20px;
+  position: relative;
+  z-index: 50;
+}
+
+.section-tabs .nav-tabs .nav-item.show .nav-link, .section-tabs .nav-tabs .nav-link.active:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  left: calc(50% - 10px);
+  bottom: -4px;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  z-index: -1;
 }
 
 .section-tabs .nav-tabs .nav-item.show .nav-link, .section-tabs .nav-tabs .nav-link.active {
@@ -4125,6 +4148,7 @@ a.ui-button:active,
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     z-index: -1;
+}
 }
 
 .section-tabs p, .section-tabs li {
@@ -4349,8 +4373,19 @@ a.ui-button:active,
     .category-slick .slick-dots li:hover button {background:#444;}
     .category-slick .slick-dots li.slick-active button {background:#444;}
 
-    .category-slick .slick-list {overflow:visible;}
-    .category-slick {position: relative;z-index: 98;}
+    .category-slick {
+      position: relative;
+      z-index: 98;
+      clear: both;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .landing-category .slick-list {
+      overflow: visible;
+    }
 
 }
 

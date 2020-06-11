@@ -81,6 +81,8 @@ $(document).ready(function() {
       $("#delivery_3").hide();
       $("#delivery_4").show();
       $("#delivery_5").show();
+      $("#delivery_6").show();
+      $("#delivery_7").show();
       $("#city").hide();
 
     }
@@ -120,7 +122,9 @@ $(document).ready(function() {
     $('.nav-link').click(function() {
            $('.nav-tabs .nav-link').removeClass('active');
         });
+
     */
+
   }
 
   $('.product_slider').slick({
