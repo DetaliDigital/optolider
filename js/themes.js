@@ -116,11 +116,11 @@ $(document).ready(function() {
       variableWidth: true
     });
 
-
+    /*
     $('.nav-link').click(function() {
            $('.nav-tabs .nav-link').removeClass('active');
         });
-
+    */
   }
 
   $('.product_slider').slick({
