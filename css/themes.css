@@ -4389,6 +4389,7 @@ a.ui-button:active,
 
 }
 
+
 /*Новая шапка Правки от 01.05.2020 Старт */
 
 .header-column.header-geolocation {
@@ -4430,3 +4431,42 @@ a.ui-button:active,
     font-weight: 600;
 }
 /*Новая шапка Правки от 01.05.2020 Конец */
+
+/*Аккордион*/
+.accordion {
+    margin: 2rem 0;
+}
+
+.accordion .card {
+    border-radius: 0;
+}
+
+.accordion .card-header {
+    position: relative;
+}
+
+.accordion .card-header:hover {
+    background-color:#3b7a61;
+}
+
+.accordion .card-header .btn.btn-link {
+    color: #3c3c3c !important;
+    text-decoration: none;
+}
+
+.accordion .card-header .btn.btn-link:hover {
+    text-decoration: none;
+    color: #ffdc77 !important;
+}
+
+.accordion .card-header:hover > a > .btn.btn-link {
+    color: #ffdc77!important;
+}
+
+.accordion .card-header:first-child {
+    border-radius: 0;
+}
+
+.accordion .card-body, .accordion .card-body p {
+    font-size: 14px;
+}

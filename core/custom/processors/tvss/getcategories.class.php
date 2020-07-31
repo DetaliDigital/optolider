@@ -1,5 +1,5 @@
 <?php
-class customTvssComboGetResourcesProcessor extends modObjectGetListProcessor
+class customTvssComboGetCategoriesProcessor extends modObjectGetListProcessor
 {
     public $classKey = 'msCategory';
     public $languageTopics = array('resource');
@@ -70,4 +70,4 @@ class customTvssComboGetResourcesProcessor extends modObjectGetListProcessor
     }
 }
 
-return 'customTvssComboGetResourcesProcessor';
+return 'customTvssComboGetCategoriesProcessor';

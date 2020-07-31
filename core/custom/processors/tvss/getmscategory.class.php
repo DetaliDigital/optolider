@@ -71,3 +71,4 @@ class customTvssComboGetResourcesProcessor extends modObjectGetListProcessor
 }
 
 return 'customTvssComboGetResourcesProcessor';
+
