@@ -2,9 +2,11 @@
 {include 'dsmc_header'}
 
 <div class="main my-4">
-    {include 'dsmc_crumbs'}
     <div class="container">
-        <h1 class="text-uppercase font-weight-bold mb-4">{$_modx->resource.pagetitle}</h1>
+        {include 'dsmc_crumbs'}
+        {if 'pagetitle' | resource ?}
+        <h1 class="text-uppercase font-weight-bold mb-4">{'pagetitle' | resource}</h1>
+        {/if}
     </div>
 
     {set $section_category_top_id = $_modx->resource.section_category_top | fromJSON}
