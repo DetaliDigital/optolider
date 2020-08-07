@@ -24,14 +24,6 @@
                         ]}
                         {/foreach}
                     </ul>
-
-                    {'!MsieBtnDownloadPrice' | snippet: [
-                    'preset' => 17,
-                    'res' => 2,
-                    'filename' => 'optolider_ru_' ~ ('' | date : 'd-m-Y'),
-                    'tpl' => "dsmc.msieBtnDownloadAllPriceTpl"
-                    ]}
-
                     <div class="py-5 small">
                         {'content' | resource}
                     </div>

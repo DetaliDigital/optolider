@@ -1,0 +1,17 @@
+.nav {
+  &.nav-link-lg {
+    .nav-item {
+      .nav-link {
+        font-size: 0.9375rem;
+        font-weight: bold;
+      }
+    }
+  }
+  &.nav-link-light {
+    .nav-item {
+      .nav-link {
+        color: $white !important;
+      }
+    }
+  }
+}
