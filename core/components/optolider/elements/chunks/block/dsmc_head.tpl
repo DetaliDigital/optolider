@@ -30,6 +30,7 @@
     <meta name="Revizit-after" content="3 days" />
 
     <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/fonts/stylesheet.css">
+    <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/vendor/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/css/style.default.min.css" id="theme-stylesheet">
 
     {*
@@ -40,7 +41,6 @@
     <link rel="stylesheet" href="css/style_catalog.css?{filemtime($modx->getOption('base_path') ~ 'css/style_catalog.css')}">
     *}
 
-    <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/css/">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png" />
