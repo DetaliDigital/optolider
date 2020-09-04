@@ -1,0 +1,73 @@
+.form-group {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #000;
+  label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+.form-control {
+  border-color: #e5e5e5;
+  transition: border-color .5s ease-in-out;
+  font-size: 0.8125rem;
+  background: #f6f6f6;
+  border-radius: 0;
+  &:focus {
+    border-color: $success;
+  }
+  &:placeholder {
+    font-size: 0.8125rem;
+  }
+  &.form-control-lg {
+    height: calc(1.5em + 2rem);
+  }
+}
+
+textarea {
+  &.form-control {
+    height: 170px !important;
+  }
+}
+
+.custom-checkbox {
+  .custom-control-label {
+    &:before {
+      border-radius: 0px;
+    }
+  }
+}
+
+.custom-control-label {
+  position: relative;
+
+  &:before {
+    background-color: transparent;
+    border: 1px solid;
+    top: 0rem;
+  }
+
+  &:after {
+    top: 0rem;
+  }
+
+}
+
+.custom-control-input:checked ~ .custom-control-label {
+  &:after {
+    background-color: $success;
+    border-radius: 0px;
+  }
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: $success;
+}
+
+.custom-control-label::before,
+.custom-file-label,
+.custom-select {
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}

@@ -30,3 +30,5 @@ document.body.insertBefore(div, document.body.childNodes[0]);
 // pls don't forget to change to your domain :)
 injectSvgSprite('{'assets_url' | option}components/optolider/dist/icons/svg-sprite.svg');
 </script>
+
+{$_modx->regClientScript('assets_url' | option ~ 'components/optolider/dist/js/theme.js')}

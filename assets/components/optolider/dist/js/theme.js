@@ -21,7 +21,11 @@ $(function () {
         });
     };
 
-    $('.btn.btn-lg.btn-warning').on("show.bs.modal", function(e){
-       console.log('show bs modal');
+    $(document).on('show.bs.modal','#oneClickForm', function (e) {
+        let object = $(e.relatedTarget);
+        let title = object.data('title');
+        let product = object.data('product');
+        $(this).find('.mvtforms2-modal-title').html(`${ title } <span class="text-success">${ product }</span>`);
     });
 });
+

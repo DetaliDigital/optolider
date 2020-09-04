@@ -22,7 +22,7 @@
             <div class="form-group row input-parent">
                 <div class="col-md-12">
                     <textarea name="comment" id="comment" placeholder="{'ms2_frontend_comment' | lexicon}"
-                              class="form-control{('comment' in list $errors) ? ' error' : ''}">{$form.comment}</textarea>
+                              class="form-control form-control-lg{('comment' in list $errors) ? ' error' : ''}">{$form.comment}</textarea>
                 </div>
             </div>
         </div>
@@ -76,15 +76,13 @@
         </div>
         <div class="col-12" id="street">
             {foreach ['city','street'] as $field}
-                <div class="form-group row input-parent" id="{$field}" style="{if $field == 'city'}display:none;{/if}">
-                    <label class="col-md-2 col-form-label form-big-label" for="{$field}">
+                <div class="form-group input-parent" id="{$field}" style="{if $field == 'city'}display:none;{/if}">
+                    <label for="{$field}">
                         {('ms2_frontend_' ~ $field) | lexicon} <span class="required-star">*</span>
                     </label>
-                    <div class="col-md-6">
                         <input type="text" id="{$field}" placeholder="{('ms2_frontend_' ~ $field) | lexicon}"
                                name="{$field}" value="{$form[$field]}"
                                class="form-control form-control-lg{($field in list $errors) ? ' error' : ''}">
-                    </div>
                 </div>
             {/foreach}
         </div>
