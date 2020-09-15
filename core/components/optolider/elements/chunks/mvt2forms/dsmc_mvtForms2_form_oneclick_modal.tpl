@@ -19,11 +19,16 @@
                     </div>
                     <div class="form-group">
                         <label>Ваш адрес электронной почты</label>
-                        <input class="form-control form-control-lg"  name="{$formID}_email" type="email" placeholder="E-mail*">
+                        <input class="form-control form-control-lg"  name="{$formID}_email" type="email" placeholder="E-mail">
                     </div>
                     <div class="form-group">
                         <label>Ваш телефон</label>
                         <input class="form-control form-control-lg mvtFormPhone" name="{$formID}_phone" type="text" placeholder="Номер телефона*">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Количество товара, шт.</label>
+                        <input class="form-control form-control-lg mvtFormPhone" name="{$formID}_count" type="text" placeholder="1 шт *">
                     </div>
 
                     <div class="form-group mt-4">

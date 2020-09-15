@@ -120,6 +120,9 @@
                                         {if $_modx->resource.notavailable == 1}
                                             <div class="row no-gutters">
                                                 <div class="col-md-6">
+                                                    <button class="btn btn-secondary btn-lg col-12 rounded-0 disabled">Нет в наличии</button>
+                                                </div>
+                                                <div class="col-md-6">
                                                     <button data-target="#oneClickForm" data-toggle="modal"
                                                             class="mvtForms2OneClickForm btn btn-warning btn-lg col-12 rounded-0"
                                                             data-title="Запрос товара"
@@ -127,28 +130,24 @@
                                                         Оставить заявку
                                                     </button>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <button class="btn btn-secondary btn-lg col-12 rounded-0 disabled">Нет в наличии</button>
-                                                </div>
+
                                             </div>
                                         {else}
                                             <div class="row no-gutters">
-                                                <div class="col-md-6">
-                                                    {if $_modx->user.id > 0}
-                                                        <button type="button" data-target="#oneClickForm"
-                                                                data-toggle="modal" data-title="Быстрый заказ"
-                                                                data-product="{'pagetitle' | resource}"
-                                                                class="mvtForms2OneClickForm btn btn-lg btn-warning col-12 rounded-0">
-                                                            Купить в 1 клик
-                                                        </button>
-                                                    {/if}
-                                                </div>
                                                 <div class="col-md-6">
                                                     <button type="submit"
                                                             class="btn btn-success btn-lg col-12 rounded-0"
                                                             name="ms2_action" value="cart/add"
                                                             onclick="ym(29584835, 'reachGoal', 'tovar_korzina'); return true;">
                                                         [[%ms2_frontend_add_to_cart]]
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button type="button" data-target="#oneClickForm"
+                                                            data-toggle="modal" data-title="Быстрый заказ"
+                                                            data-product="{'pagetitle' | resource}"
+                                                            class="mvtForms2OneClickForm btn btn-lg btn-warning col-12 rounded-0">
+                                                        Быстрый заказ
                                                     </button>
                                                 </div>
                                             </div>
