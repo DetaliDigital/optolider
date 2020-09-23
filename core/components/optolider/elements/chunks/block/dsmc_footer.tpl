@@ -31,10 +31,10 @@
                     ]}
                 </div>
                 <div class="col-xl-3 my-5 my-xl-0">
-                    <a href="" class="btn btn-warning mb-2">50 хитов</a>
-                    <a href="" class="btn btn-info mb-2">Последние поступление</a>
-                    <a href="" class="btn btn-danger mb-2">Распродажа</a>
-                    <a href="" class="btn btn-success mb-2">1000 мелочей</a>
+                    <a href="50-xitov/" class="btn btn-warning mb-2">50 хитов</a>
+                    <a href="novinki-nedeli/" class="btn btn-info mb-2">Последние поступление</a>
+                    <a href="rasprodazha/" class="btn btn-danger mb-2">Распродажа</a>
+                    <a href="1000-melochej/" class="btn btn-success mb-2">1000 мелочей</a>
                 </div>
                 <div class="col-xl-3">
                     {'!pdoMenu' | snippet : [
