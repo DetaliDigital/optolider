@@ -49,7 +49,7 @@
 
                                 <div class="col-md-7 col-lg-8">
 
-                                    {if 'min_count' | resource == 1 or 'min_count' | resource == ''}
+                                    {if 'min_count' | resource == 1}
                                     <div class="form-group align-items-center">
                                         <label class="col-form-label small text-light">Цена по дропшиппингу:</label>
                                         <div class="h5 font-weight-bold" itemprop="offers" itemscope=""
@@ -68,7 +68,7 @@
 
                                                     {foreach $saleprice as $key => $item first=$first last=$last}
 
-                                                    {if 'min_count' | resource != 1 or 'min_count' | resource != ''}
+                                                    {if 'min_count' | resource != 1}
 
                                                     {unset $key.1}
 
@@ -254,8 +254,7 @@
         <div class="row catalog_0718 card_similar_block">
 
             {'msProducts' | snippet : [
-            'prepareSnippet' => 'prepareSnippet',
-            'tpl'=> 'row.product.dsmc',
+            'tpl' => 'row.product.slider.dsmc',
             'resources' => ''
             'sortBy' => 'RAND()'
             'limit' => 4,
@@ -274,8 +273,7 @@
         <h3 class="mt-5 mb-2 h2">Вы <span class="text-danger">смотрели</span></h3>
         <div class="row catalog_0718 card_viewed_block">
             {'!msProducts' | snippet : [
-            'prepareSnippet' => 'prepareSnippet',
-            'tpl'=> 'row.product.dsmc',
+            'tpl' => 'row.product.slider.dsmc',
             'resources' => $idv,
             'sortBy' => 'RAND()'
             'limit' => 4,

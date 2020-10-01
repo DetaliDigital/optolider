@@ -92,6 +92,7 @@
 
             <div class="row catalog_0718 showcase_slider">
                 {'!msProducts' | snippet : [
+                'prepareSnippet' => 'prepareSnippet',
                 'tpl'=> 'row.product.dsmc',
                 'parents'=> ('id' | resource),
                 'resources' => $section_id_showcase_top,
@@ -145,6 +146,7 @@
 
             <div class="row catalog_0718 showcase_slider">
                 {'!msProducts' | snippet : [
+                'prepareSnippet' => 'prepareSnippet',
                 'tpl'=> 'row.product.dsmc',
                 'parents'=> ('id' | resource),
                 'resources' => $section_id_showcase_bottom,

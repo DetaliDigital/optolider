@@ -15,3 +15,13 @@
     }
   }
 }
+
+.section-tabs {
+  .nav-tabs {
+    .nav-link {
+      &.active {
+      box-shadow: $box-shadow-sm;
+      }
+    }
+  }
+}
