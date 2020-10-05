@@ -3,7 +3,7 @@
 
 
         <div class="product-info-title px-lg-3 px-1 px-lg-0 col-12 d-lg-none d-block">
-            <div class="line-height-1 mb-1 title"><a class="text-success" href="{$_modx->makeUrl($id)}">{$pagetitle}</a></div>
+            <div class="line-height-1 mb-1 title"><a class="text-success" href="{$uri}">{$pagetitle}</a></div>
 
         </div>
 
@@ -11,18 +11,18 @@
         <div class="image-frame mb-3 text-center justify-content-center image col-4 col-lg-12">
 
             <div class="d-flex flex-xl-column flags">
-                {if 'Новинка' in list $types}
+                {foreach $types as $item}
+                {switch $item}
+                {case 'Новинка'}
                 <img src="css/images/ic.png">
-                {/if}
-                {if 'Избранное' in list $types}
+                {case 'Избранное'}
                 <img src="css/images/ic2.png">
-                {/if}
-                {if 'Распродажа' in list $types}
+                {case 'Распродажа'}
                 <img src="css/images/ic3.png">
-                {/if}
-                {if 'Одностраничникам' in list $types}
+                {case 'Одностраничникам'}
                 <img src="css/images/ic4.png">
-                {/if}
+                {/switch}
+                {/foreach}
             </div>
             {if $image?}
             <img src="{$image  | phpthumbon : "w=183&h=248&q=70&bg=FFFFFF" }" class="mw-100" alt="{$pagetitle}" title="{$pagetitle}"/>
@@ -33,7 +33,7 @@
             {/if}
 
             <div class="d-lg-none d-block">
-                {if $min_count != 0}
+                {if $min_count != 1 || $min_count != ''}
                 <div class="min_count text-center"><small>Заказ <br> от <b>{$min_count} шт</b></small></div>
                 {else}
                 <div class="min_count text-center"><small>Заказ <br> от <b>1 шт</b></small></div>
@@ -44,7 +44,7 @@
         <div class="product-info col-8 col-lg-12 px-lg-2 px-0">
 
             <div class="product-info-title px-3 px-lg-0 d-lg-block d-none">
-                <div class="line-height-1 mb-1 title"><a class="text-dark font-weight-bold" href="{$_modx->makeUrl($id)}">{$pagetitle}</a></div>
+                <div class="line-height-1 mb-1 title"><a class="text-dark font-weight-bold" href="{$uri}">{$pagetitle}</a></div>
 
             </div>
             <div class="product-info-price py-2 d-lg-block d-none">
@@ -68,7 +68,7 @@
 
 
             <ul class="list-group mt-2 d-lg-none d-block">
-                {if $min_count == 1 || $min_count == 1}
+                {if $min_count == 1 || $min_count == ''}
                 <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
                     Дропшиппинг
                     <span class="font-weight-bold">{$mssp.1.price} {'ms2_frontend_currency' | lexicon}</span>
@@ -97,7 +97,7 @@
                                 <span class="input_count_action input-group-text minus input-group-prepend" data-value="-1">
                                     –
                                 </span>
-                            <input type="number" name="count" value="{if $min_count != 0}{$min_count}{else}1{/if}" id="product_price" class="form-control text-center">
+                            <input type="number" name="count" value="{if $min_count != 1 || $min_count != ''}{$min_count}{else}1{/if}" id="product_price" class="form-control text-center">
                             <span class="input_count_action input-group-text plus input-group-append" >
                                     +
                                 </span>
@@ -125,18 +125,11 @@
                 <input type="hidden" name="count" value="1">
                 <input type="hidden" name="options" value="[]">
                 <div class="px-3">
-                    <div class="text-color-default line-height-1 mb-3 title font-weight-bold"><a href="{$_modx->makeUrl($id)}">{$pagetitle}</a></div>
-
-                    {*
-                    {'msSalePrice' | snippet : [
-                    'product' => $id,
-                    'tpl' => 'tpl.msPrice.dsmc'
-                    ]}
-                    *}
+                    <div class="text-color-default line-height-1 mb-3 title font-weight-bold"><a href="{$uri}">{$pagetitle}</a></div>
                 </div>
                 <div class="product-info-price-1 mt-3 mb-2">
                     <ul class="list-group">
-                        {if $min_count == 1 || $min_count == 1}
+                        {if $min_count == 1 || $min_count == ''}
                         <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
                             Дропшиппинг
                             <span class="font-weight-bold">{$mssp.1.price} {'ms2_frontend_currency' | lexicon}</span>
@@ -155,7 +148,7 @@
                                 <span class="input_count_action input-group-text minus input-group-prepend" data-value="-1">
                                     –
                                 </span>
-                                <input type="number" name="count" value="{if $min_count != 0}{$min_count}{else}1{/if}" id="product_price" class="form-control text-center">
+                                <input type="number" name="count" value="{if $min_count != 1 || $min_count != ''}{$min_count}{else}1{/if}" id="product_price" class="form-control text-center">
                                 <span class="input_count_action input-group-text plus input-group-append" >
                                     +
                                 </span>

@@ -66,7 +66,7 @@
 			</span>
                         <p class="mb-2" itemprop="streetAddress">Лиговский пр., д. 256, лит. В</p>
                         <p class="mb-0">
-                            <a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9]|/.+': ''}"
+                            <a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9.+]|/': ''}"
                                itemprop="telephone">{$_modx->config.phone}</a>
                         </p>
                     </div>
@@ -82,7 +82,7 @@
 			</span>
                         <p class="mb-2" itemprop="streetAddress">Рязанский проспект 24, к. 1</p>
                         <p class="mb-0">
-                            <a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9]|/': ''}"
+                            <a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9.+]|/': ''}"
                                itemprop="telephone">{$_modx->config.phone_2}</a>
                         </p>
                     </div>
@@ -98,7 +98,7 @@
 			</span>
                         <p class="mb-2" itemprop="streetAddress">Оптолидер в регионах</p>
                         <p class="mb-0">
-                            <a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9]|/': ''}"
+                            <a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9.+]|/': ''}"
                                itemprop="telephone">{$_modx->config.phone_4}</a>
                         </p>
                     </div>

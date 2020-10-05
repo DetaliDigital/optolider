@@ -22,18 +22,19 @@
                 <h1 class="text-md-left text-uppercase font-weight-bold" itemprop="name">{'pagetitle' | resource}</h1>
                 {/if}
                 <div class="d-flex flags">
-                    {if 'Новинка' in list $_modx->resource.types}
-                    <img src="css/images/ic.png">
-                    {/if}
-                    {if 'Избранное' in list $_modx->resource.types}
-                    <img src="css/images/ic2.png">
-                    {/if}
-                    {if 'Распродажа' in list $_modx->resource.types}
-                    <img src="css/images/ic3.png">
-                    {/if}
-                    {if 'Одностраничникам' in list $_modx->resource.types}
-                    <img src="css/images/ic4.png">
-                    {/if}
+
+                    {foreach $_modx->resource.types as $item}
+                        {switch $item}
+                        {case 'Новинка'}
+                        <img src="css/images/ic.png">
+                        {case 'Избранное'}
+                        <img src="css/images/ic2.png">
+                        {case 'Распродажа'}
+                        <img src="css/images/ic3.png">
+                        {case 'Одностраничникам'}
+                        <img src="css/images/ic4.png">
+                        {/switch}
+                    {/foreach}
 
                 </div>
                 <div class="row">
@@ -279,7 +280,7 @@
             'resources' => $idv,
             'sortBy' => 'RAND()'
             'limit' => 4,
-            'parents' => 4492,
+            'parents' => 2,
             'includeContent' => 1,
             'includeTVs' =>
             'pol,mehanik,popular,price,new,sale,korpus,braslet,brand,oldprice,razmers,color,sostav,notavailable'

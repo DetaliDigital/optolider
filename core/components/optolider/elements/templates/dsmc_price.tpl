@@ -16,12 +16,10 @@
 
                     <ul class="list list-inline row py-5 border-bottom">
                         {foreach $rows as $row}
-                        {'!MsieBtnDownloadPrice' | snippet: [
-                        'preset' => $row.id_export,
-                        'res' => $row.category,
-                        'filename' => 'optolider_ru_' ~ ('' | date : 'd-m-Y'),
-                        'tpl' => "dsmc.msieBtnDownloadPriceTpl"
-                        ]}
+                        <li class="list-inline-item col-lg-6 mr-0">
+                            <a href="{$row.price}" class="btn btn-link text-dark">
+                                <i class="fas fa-file-excel mr-2 text-success"></i>{$row.name}</a>
+                        </li>
                         {/foreach}
                     </ul>
                     <div class="py-5 small">

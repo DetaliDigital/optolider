@@ -116,21 +116,21 @@
                     </div>
                     <div class="header-column justify-content-start header_top2row_phone d-none d-lg-flex header-geolocation row">
 <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9]|/': ''}" class="text-dark mr-2">{$_modx->config.phone}</a>
+<a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark mr-2">{$_modx->config.phone}</a>
 <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Санкт-Петербург</p>
 </span>
                         <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone_3 | preg_replace:'/[^0-9]|/': ''}"
+<a href="tel:{$_modx->config.phone_3 | preg_replace:'/[^0-9.+]|/': ''}"
    class="text-dark mr-2">{$_modx->config.phone_3}</a>
 <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Екатеринбург</p>
 </span>
                         <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9]|/': ''}"
+<a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9.+]|/': ''}"
    class="text-dark mr-2">{$_modx->config.phone_2}</a>
 <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Москва</p>
 </span>
                         <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9]|/': ''}"
+<a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9.+]|/': ''}"
    class="text-dark mr-2">{$_modx->config.phone_4}</a>
 <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Россия</p>
 </span>
@@ -276,7 +276,7 @@
 			</span>
                         <p class="mb-2" itemprop="streetAddress">Лиговский пр., д. 256, лит. В</p>
                         <p class="mb-0">
-                            <a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9]|/.+': ''}"
+                            <a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9.+]|/': ''}"
                                itemprop="telephone">{$_modx->config.phone}</a>
                         </p>
                     </div>
@@ -292,7 +292,7 @@
 			</span>
                         <p class="mb-2" itemprop="streetAddress">Рязанский проспект 24, к. 1</p>
                         <p class="mb-0">
-                            <a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9]|/': ''}"
+                            <a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9.+]|/': ''}"
                                itemprop="telephone">{$_modx->config.phone_2}</a>
                         </p>
                     </div>
@@ -308,7 +308,7 @@
 			</span>
                         <p class="mb-2" itemprop="streetAddress">Оптолидер в регионах</p>
                         <p class="mb-0">
-                            <a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9]|/': ''}"
+                            <a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9.+]|/': ''}"
                                itemprop="telephone">{$_modx->config.phone_4}</a>
                         </p>
                     </div>

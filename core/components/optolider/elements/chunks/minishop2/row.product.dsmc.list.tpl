@@ -6,18 +6,20 @@
         </div>
         <div class="col-lg-2 col-4">
             <div class="d-flex flex-xl-column flags">
-                {if 'Новинка' in list $types}
+                {foreach $types as $item}
+
+                {switch $item}
+                {case 'Новинка'}
                 <img src="css/images/ic.png">
-                {/if}
-                {if 'Избранное' in list $types}
+                {case 'Избранное'}
                 <img src="css/images/ic2.png">
-                {/if}
-                {if 'Распродажа' in list $types}
+                {case 'Распродажа'}
                 <img src="css/images/ic3.png">
-                {/if}
-                {if 'Одностраничникам' in list $types}
+                {case 'Одностраничникам'}
                 <img src="css/images/ic4.png">
-                {/if}
+                {/switch}
+
+                {/foreach}
 
             </div>
             {if $image?}
@@ -32,7 +34,7 @@
 
         </div>
         <div class="col-lg-7 col-8 bord px-lg-2 px-0" style="border-right:1px solid #dee2e6;">
-            <div class="line-height-1 mb-1 title h6 d-lg-block d-none"><a class="text-dark font-weight-bold" href="{$_modx->makeUrl($id)}">{$pagetitle}</a></div>
+            <div class="line-height-1 mb-1 title h6 d-lg-block d-none"><a class="text-dark font-weight-bold" href="{$uri}">{$pagetitle}</a></div>
             <div class="product-info-price py-2 d-lg-block d-none">
 
                 {foreach $mssp as $item first = $first last = $last}
@@ -63,7 +65,7 @@
                         <div class="product-info-price product-info">
                             <ul class="list-group mt-2">
 
-                                {if $min_count == 1 || $min_count == 1}
+                                {if $min_count == 1 || $min_count == ''}
                                 <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
                                     Дропшиппинг
                                     <span class="font-weight-bold">{$mssp.1.price} {'ms2_frontend_currency' | lexicon}</span>
@@ -84,13 +86,13 @@
                                 <span class="input_count_action input-group-text minus input-group-prepend" data-value="-1">
                                     –
                                 </span>
-                                <input type="number" name="count" value="{if $min_count != 0}{$min_count}{else}1{/if}" id="product_price" class="form-control text-center">
+                                <input type="number" name="count" value="{if $min_count != 1 || $min_count != ''}{$min_count}{else}1{/if}" id="product_price" class="form-control text-center">
                                 <span class="input_count_action input-group-text plus input-group-append" >
                                     +
                                 </span>
                             </div>
                         </div>
-                        <div class="min_count text-center d-lg-block d-none"><small>Заказ от <b>{$min_count} шт</b></small></div>
+                        <div class="min_count text-center d-lg-block d-none"><small>Заказ от <b>{$min_count ?: '1'} шт</b></small></div>
                     </div>
 
                     <div class="col-lg-5 col-12">
@@ -113,7 +115,7 @@
         <div class="col-3 d-lg-block d-none">
             <div class="product-info-price product-info">
                 <ul class="list-group mt-2">
-                    {if $min_count == 1 || $min_count == 1}
+                    {if $min_count == 1 || $min_count == ''}
                     <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
                         Дропшиппинг
                         <span class="font-weight-bold">{$mssp.1.price} {'ms2_frontend_currency' | lexicon}</span>

@@ -8,7 +8,14 @@
 
         <div class="catalog_0718">
 
+            {if $.get['query'] ?}
+                {set $dsmc_parent = 2}
+                {else}
+                {set $dsmc_parent = $dsmc_mspcs_where}
+            {/if}
+
             {'!mCacher' | snippet : [
+            'parents' => $dsmc_parent ?: 'id' | resource,
             'cached_element'=>'msPCS',
             'cacheExpires'=>0,
             'mode' => 2,
