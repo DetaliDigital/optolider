@@ -89,10 +89,10 @@
                     <table style="width:100%;">
                         <tr>
                             <td style="{$style.td}">
-                                <h3 style="{$style.h}{$style.h3}">{$form} интернет-магазин <b>{'site_name' | option | ucfirst}</b></h3>
+                                <h3 style="{$style.h}{$style.h3}">{$form} в магазине <b>{'site_name' | option | ucfirst}</b></h3>
                                 <br>
-                                <p>Здравствуйтe.</p>
-                                <p><b>{$fields['Имя']}</b>, обратился(ась) к Вам за консультацией. Перозвоните ему, клиент обратил внимание на страницу <a href="{$site_url}/{$fields['id'] | resource: 'uri' }">"{$fields['id'] | resource: 'pagetitle' }"</a>{$fields['stock'] == 1 ? ' ,но к сожалению данного товара нет в наличии.' : ''}</p>
+                                <p>Здравствуйте, у нас новая заявка!</p>
+                                <p><b>{$fields['Имя']}</b>, оформил быстрый запрос товара. Свяжитесь с ним для уточнения деталей запроса, клиент обратил внимание на страницу <a href="{$site_url}/{$fields['id'] | resource: 'uri' }">"{$fields['id'] | resource: 'pagetitle' }"</a>{$fields['stock'] == 1 ? ' . К сожалению, данного товара <b>нет в наличии</b>. С клиентом необходимо согласовать сроки и возможность поставки.' : ''}</p>
                                 <br>
                                 <h4>Данные для обратной связи:</h4>
                                 {foreach $dsmc_list as $name => $value}
@@ -113,7 +113,7 @@
                 {if $cart?}
                     <hr>
                     {set $summ = 0}
-                    <h3>Товары в корнизе покупателя</h3>
+                    <h3>Товары в корзине покупателя</h3>
                     <table style="border-collapse: collapse;">
                         <tr>
                             <th style="{$style.th_product}">Товар</th>

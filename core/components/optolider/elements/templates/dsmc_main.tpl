@@ -74,6 +74,7 @@
 </div>
 {/if}
 
+{if $_modx->user.id > 0}
 <div class="promo-p-group">
     {if $_modx->resource.lovely_day ?}
     {'!getCache' | snippet : [
@@ -141,6 +142,7 @@
 
 
 </div>
+{/if}
 
 <section class="action-section mt-0 mb-5">
     <div class="container">

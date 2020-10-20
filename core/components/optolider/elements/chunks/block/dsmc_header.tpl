@@ -11,7 +11,7 @@
                         'cacheKey' => 'getMenu'
                         'tpl' => '@INLINE <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a>{$wrapper}</li>',
                         'parents' => 0,
-                        'resources' => '1,73,76,229,75,77,78',
+                        'resources' => '1,73,76,229,12416,75,77,78',
                         'firstClass' => '',
                         'lastClass' => '',
                         'rowClass' => 'nav-item'

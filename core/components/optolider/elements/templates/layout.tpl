@@ -71,7 +71,7 @@
                         <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a>{$wrapper}</li>
                         ',
                         'parents' => 0,
-                        'resources' => '1,73,76,229,75,77,78',
+                        'resources' => '1,73,76,229,12416,75,77,78',
                         'firstClass' => '',
                         'lastClass' => '',
                         'rowClass' => 'nav-item'
@@ -239,7 +239,7 @@
                 </div>
                 <div class="col-xl-3 my-5 my-xl-0">
                     <a href="50-xitov/" class="btn btn-warning mb-2">50 хитов</a>
-                    <a href="novinki-nedeli/" class="btn btn-info mb-2">Последние поступление</a>
+                    <a href="novinki-nedeli/" class="btn btn-info mb-2">Последние поступления</a>
                     <a href="rasprodazha/" class="btn btn-danger mb-2">Распродажа</a>
                     <a href="1000-melochej/" class="btn btn-success mb-2">1000 мелочей</a>
                 </div>
@@ -414,11 +414,7 @@
     // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
     // while using file:// protocol
     // pls don't forget to change to your domain :)
-    injectSvgSprite('{'
-    assets_url
-    ' | option}components/optolider/dist/icons/svg-sprite.svg'
-    )
-    ;
+    injectSvgSprite('{'assets_url' | option}components/optolider/dist/icons/svg-sprite.svg');
 </script>
 
 {$_modx->regClientScript('assets_url' | option ~ 'components/optolider/dist/js/theme.js')}
