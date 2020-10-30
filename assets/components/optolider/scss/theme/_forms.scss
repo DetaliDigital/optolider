@@ -71,3 +71,9 @@ textarea {
 .custom-select {
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.input-group {
+  .btn {
+    padding: 0 !important;
+  }
+}

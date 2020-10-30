@@ -250,6 +250,26 @@
 
     </div>
 
+    {if $_modx->user.id > 0}
+
+    {'preTools' | snippet : [
+    'parents' => 'parent' | resource,
+    'prepareSnippet' => 'prepareSnippet',
+    'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
+    'tpl' => 'dsmc.msProducts.showcase.row',
+    'limit' => 8,
+    'rowPlaceholders' => [
+    'class' => 'col-lg-3'
+    ],
+    'wrapperPlaceholders' => [
+    'class_section' => 'bg-white'
+    'title' => '<span class="text-info">Похожие</span> товары',
+    'swiper' => 0
+    ]
+    ]}
+
+    {/if}
+
     <div class="container">
         <h3 class="mt-5 mb-2 h2"><span class="text-primary">Похожие</span> товары</h3>
         <div class="row catalog_0718 card_similar_block">

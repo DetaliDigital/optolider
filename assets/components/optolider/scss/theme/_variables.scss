@@ -10,10 +10,10 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
-$gray-700: #3c3c3c !default;
+$gray-700: #404040 !default;
 $gray-800: #353535 !default; // change
 $gray-900: #282828 !default; // change
-$black:    #000 !default;
+$black:    #262626 !default;
 
 $grays: ();
 $grays: map-merge((
@@ -67,7 +67,8 @@ $colors: map-merge((
   $primary:  #ef5285;
 }
 @else if $templateColour == green and not $primary {
-  $primary:  #429244;
+  $primary:  #56a988;
+  $secondary:  #56a988;
 }
 @else if $templateColour == gold and not $primary {
   $primary:  #bcac76;

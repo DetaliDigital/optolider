@@ -19,7 +19,7 @@ $row['mssp'] = $mssp;
 $item = array_merge(
     (array) $row,
     array(
-        'tplPlaceholders' => $modx->getOption('tplPlaceholders', $scriptProperties, '')
+        'rowPlaceholders' => $modx->getOption('rowPlaceholders', $scriptProperties, '')
     )
 );
 

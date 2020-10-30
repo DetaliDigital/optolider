@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/fonts/stylesheet.css">
     <link rel="stylesheet"
           href="{'assets_url' | option}components/optolider/dist/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/vendor/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/css/style.default.min.css"
           id="theme-stylesheet">
 
@@ -45,7 +46,7 @@
           href="css/style_catalog.css?{filemtime($modx->getOption('base_path') ~ 'css/style_catalog.css')}">
     *}
 
-
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png"/>
 
@@ -416,6 +417,12 @@
     // pls don't forget to change to your domain :)
     injectSvgSprite('{'assets_url' | option}components/optolider/dist/icons/svg-sprite.svg');
 </script>
+
+<!-- Swiper Carousel -->
+<script src="{'assets_url' | option}components/optolider/dist/vendor/swiper/js/swiper.min.js"></script>
+
+<!-- Input Spinner -->
+<script src="{'assets_url' | option}components/optolider/node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js"></script>
 
 {$_modx->regClientScript('assets_url' | option ~ 'components/optolider/dist/js/theme.js')}
 </body>

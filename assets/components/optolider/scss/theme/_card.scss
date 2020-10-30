@@ -1,0 +1,116 @@
+.product {
+  margin-bottom: 2rem;
+  height: calc(100% - 2rem);
+  border: 3px solid $gray-400;
+
+  .card-title {
+    a {
+      color: $gray-700;
+      font-weight: $font-weight-bold;
+      &:hover {
+        color: $success;
+      }
+    }
+  }
+  .card-price-all {
+    dt {
+      text-align: right;
+    }
+  }
+  .card-body {
+    padding: 0 2rem 2rem 2rem;
+    .card-img {
+      padding: 1rem 2rem;
+    }
+    .card-title {
+      a {
+        color: $gray-700;
+        font-weight: $font-weight-bold;
+        &:hover {
+          color: $success;
+        }
+      }
+    }
+    .card-price {
+      padding: 1rem 0;
+      color: $success;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: 'Russo One', sans-serif;
+    }
+  }
+  &:hover {
+    box-shadow: none !important;
+    .card-xl-overlay {
+      .overlay-body {
+      opacity: 1;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .product {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    padding: 1.5rem;
+
+    .card-img {
+      flex: 0 0 33.33333% !important;
+      max-width: 33.33333% !important;
+    }
+    .card-xl-overlay {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+      padding-left: 1.5rem;
+      .card-price-all {
+        font-size: 90%;
+      }
+    }
+  }
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  .overlay-body {
+    position: relative;
+    z-index: 500;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 0 .25rem rgba(38,38,38,.075) !important;
+    border-radius: 5px;
+    border: 3px solid $gray-300;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card-xl-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    .overlay-body {
+      position: relative;
+      z-index: 500;
+      opacity: 0;
+      padding: 2rem;
+      background: #fff;
+      transition: .5s ease;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border: 3px solid $gray-300;
+    }
+  }
+}
