@@ -147,6 +147,14 @@
   height: 100%;
 }
 
+@include media-breakpoint-down(xl) {
+  .swiper-slide {
+    .card-price-all {
+      font-size: 85%;
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .swiper-container {
     min-height: 500px;

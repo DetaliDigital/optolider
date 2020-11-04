@@ -68,7 +68,7 @@ $colors: map-merge((
 }
 @else if $templateColour == green and not $primary {
   $primary:  #56a988;
-  $secondary:  #56a988;
+  $secondary:  #637595;
 }
 @else if $templateColour == gold and not $primary {
   $primary:  #bcac76;

@@ -1,5 +1,6 @@
-{include "dsmc_head"}
-{include "dsmc_header"}
+{extends 'template:Базовый шаблон'}
+
+{block 'main'}
 <div class="main my-3 top-banner" id="top-banner">
     <div class="container">
         <div class="row">
@@ -75,73 +76,77 @@
 {/if}
 
 {if $_modx->user.id > 0}
-<div class="promo-p-group">
-    {if $_modx->resource.lovely_day ?}
-    {'!getCache' | snippet : [
-    'element' => 'msProducts'
-    'cacheKey' => 'main_showcase'
-    'tplWrapper' => 'dsmc.wrapper.section.showcase'
-    'tpl'=> 'slider.product.dsmc',
-    'parents'=> 8796,
-    'resources' => $_modx->resource.lovely_day,
-    'limit' => 4,
-    'sortdir' => 'DESC',
-    'includeContent' => 0,
-    'prepareSnippet' => 'addPlaceholders'
-    'addPlaceholders' => [
-    'title' => 'Подарки на <span class="promo-event__date">14 февраля</span>',
-    'background' => 'promo-event__14february',
-    'link_event_more' => 8796
-    ],
-    'includeTVs' => 'price,sale,new,dropshiping',
-    'wrapIfEmpty' => 0
-    ]}
-    {/if}
-    {if $_modx->resource.men_day ?}
-    {'!getCache' | snippet : [
-    'element' => 'msProducts'
-    'cacheKey' => 'main_showcase'
-    'tplWrapper' => 'dsmc.wrapper.section.showcase'
-    'tpl'=> 'slider.product.dsmc',
-    'parents'=> 8797,
-    'resources' => $_modx->resource.men_day,
-    'limit' => 4,
-    'sortdir' => 'DESC',
-    'includeContent' => 0,
-    'prepareSnippet' => 'addPlaceholders'
-    'addPlaceholders' => [
-    'title' => 'Подарки на <span class="promo-event__date">23 февраля</span>',
-    'background' => 'promo-event__23february',
-    'link_event_more' => 8797
-    ],
-    'includeTVs' => 'price,sale,new,dropshiping',
-    'wrapIfEmpty' => 0
-    ]}
-    {/if}
-    {if $_modx->resource.women_day ?}
-    {'!getCache' | snippet : [
-    'element' => 'msProducts'
-    'cacheKey' => 'main_showcase'
-    'tplWrapper' => 'dsmc.wrapper.section.showcase'
-    'tpl'=> 'slider.product.dsmc',
-    'parents'=> 8798,
-    'resources' => $_modx->resource.women_day,
-    'limit' => 4,
-    'sortdir' => 'DESC',
-    'includeContent' => 0,
-    'prepareSnippet' => 'addPlaceholders'
-    'addPlaceholders' => [
-    'title' => 'Подарки на <span class="promo-event__date">8 марта</span>',
-    'background' => 'promo-event__8march',
-    'link_event_more' => 8798
-    ],
-    'includeTVs' => 'price,sale,new,dropshiping',
-    'wrapIfEmpty' => 0
-    ]}
-    {/if}
+
+{'preTools' | snippet : [
+'parents' => 'tv_main_section_1_parent' | tv | fromJSON | join,
+'prepareSnippet' => 'prepareSnippet',
+'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
+'tpl' => 'dsmc.msProducts.row',
+'limit' => 8,
+'wrapIfEmpty' => 0,
+'optionFilters' => [
+'taxonomy_product' => 'main'
+] | json_encode,
+'rowPlaceholders' => [
+'class' => 'swiper-slide'
+],
+'wrapperPlaceholders' => [
+'class_section' => 'section py-5',
+'color_section' => '#F4F5FE'
+'title' => 'tv_main_section_1_parent' | dsmc_parent_name,
+'more' => 1,
+'parent' => 'tv_main_section_1_parent' | tv | fromJSON | join
+'swiper' => 1
+]
+]}
 
 
-</div>
+{'preTools' | snippet : [
+'parents' => 'tv_main_section_2_parent' | tv | fromJSON | join,
+'prepareSnippet' => 'prepareSnippet',
+'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
+'tpl' => 'dsmc.msProducts.row',
+'limit' => 8,
+'wrapIfEmpty' => 0,
+'optionFilters' => [
+'taxonomy_product' => 'main'
+] | json_encode,
+'rowPlaceholders' => [
+'class' => 'swiper-slide'
+],
+'wrapperPlaceholders' => [
+'class_section' => 'section py-5'
+'title' => 'tv_main_section_2_parent' | dsmc_parent_name,
+'color_section' => '#EAF4F0'
+'more' => 1,
+'parent' => 'tv_main_section_2_parent' | tv | fromJSON | join
+'swiper' => 1
+]
+]}
+
+{'preTools' | snippet : [
+'parents' => 'tv_main_section_3_parent' | tv | fromJSON | join,
+'prepareSnippet' => 'prepareSnippet',
+'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
+'tpl' => 'dsmc.msProducts.row',
+'limit' => 8,
+'wrapIfEmpty' => 0,
+'optionFilters' => [
+'taxonomy_product' => 'main'
+] | json_encode
+'rowPlaceholders' => [
+'class' => 'swiper-slide'
+],
+'wrapperPlaceholders' => [
+'class_section' => 'section py-5'
+'color_section' => '#FAEBEB'
+'title' => 'tv_main_section_3_parent' | dsmc_parent_name,
+'more' => 1,
+'parent' => 'tv_main_section_3_parent' | tv | fromJSON | join
+'swiper' => 1
+]
+]}
+
 {/if}
 
 <section class="action-section mt-0 mb-5">
@@ -282,6 +287,57 @@
         </div>
     </div>
 </section>
+
+{if $_modx->resource.season_pop_cat != ''}
+<div class="p-cat-section" id="p-cat-section">
+    <div class="container">
+        <h3>Готовимся к Новому Году</h3>
+        <div class="p-cat-block clearfix">
+
+            {'!pdoResources' | snippet : [
+            'parents' => 2,
+            'resources' => $_modx->resource.season_pop_cat,
+            'includeTVs' => 'image,sale,new,min_price_category',
+            'tvPrefix' => '',
+            'tpl' => 'category.main.tpl',
+            'limit' => 7,
+            'depth' => 10,
+            'where' => ['isfolder' => 1]
+            ]
+            }
+
+        </div><!--/p-cat-block-->
+    </div>
+</div>
+{/if}
+
+<section class="py-5 catalog-section"  id="popular-catalog">
+    <div class="catalog-section-head">
+        <div class="container">
+            <h2><span class="text-danger">Новый год</span> уже на носу</h2>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row catalog_0718">
+            {'!getCache' | snippet : [
+            'element' => 'msProducts',
+            'cacheKey' => 'main_showcase',
+            'prepareSnippet' => 'prepareSnippet',
+            'tpl'=> 'row.product.dsmc',
+            'parents'=> 2,
+            'depth' => 5,
+            'limit' => 8,
+            'sortdir' => 'DESC',
+            'includeContent' => 0,
+            'includeTVs' => 'price,sale,new,dropshiping',
+            'tvFilters' => 'season_pop==1'
+            ]}
+        </div>
+    </div>
+</section>
+
 <section class="bg-light py-5">
     <div class="container">
         <h2>Новости от Оптолидера</h2>
@@ -307,8 +363,4 @@
     </div>
 </section>
 
-{include "dsmc_footer"}
-{include "dsmc_script"}
-
-</body>
-</html>
+{/block}

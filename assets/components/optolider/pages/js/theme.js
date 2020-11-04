@@ -26,6 +26,9 @@ $(function () {
     });
 
     $('.form-spinner').inputSpinner();
+    $(document).on('mse2_load', function (e, response) {
+        $('.form-spinner').inputSpinner();
+    });
 
     $(document).on('show.bs.modal','#oneClickForm', function (e) {
         let object = $(e.relatedTarget);
@@ -36,7 +39,7 @@ $(function () {
 
     document.querySelectorAll('.container').forEach(n => {
         const similarBaseCarusel = new Swiper(n.querySelector('.similar-base-carusel'), {
-            slidesPerView: 1,
+            slidesPerView: 1.1,
             spaceBetween: 5,
             watchOverflow: true,
             loopedSlides: 50,
@@ -50,10 +53,10 @@ $(function () {
                     spaceBetween: 30,
                 },
                 991: {
-                    slidesPerView: 3,
+                    slidesPerView: 3.3,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 2.3,
                 },
                 576: {
                     slidesPerView: 1,

@@ -11,5 +11,16 @@ switch ($modx->event->name) {
                 return $modx->resource->getTVValue($input);
             }
         });
+
+        $fenom->addModifier('dsmc_parent_name', function ($input) use($modx) {
+            if ($input) {
+                $id = implode(json_decode($modx->resource->getTVValue($input)));
+                $data = $modx->getObject('modResource' , $id);
+
+                $row = $data->get('longtitle') ?: $data->get('pagetitle');
+                return $row;
+            }
+        });
+
         break;
 }

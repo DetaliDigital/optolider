@@ -1,5 +1,6 @@
-{include 'dsmc_head'}
-{include 'dsmc_header'}
+{extends 'template:Базовый шаблон'}
+
+{block 'main'}
 
 <div class="main my-4">
     <div class="container">
@@ -14,6 +15,7 @@
                 {set $dsmc_parent = $dsmc_mspcs_where}
             {/if}
 
+
             {'!mCacher' | snippet : [
             'parents' => $dsmc_parent ?: 'id' | resource,
             'cached_element'=>'msPCS',
@@ -23,11 +25,14 @@
             'prepareSnippet' => 'prepareSnippet',
             'snippet' => 'mFilter2',
             'tplOuter' => 'tpl.mFilter2.filter.dsmc',
-            'tpls' => 'row.product.dsmc.list,row.product.dsmc.mobile',
+            'tpls' => 'dsmc.msProducts.list,dsmc.msProducts.row',
             'element' => 'msProducts',
             'includeTVs' => 'tag,notavailable,dropshiping,stock'
             'class' => 'msProduct'
             'limit' => 48,
+            'rowPlaceholders' => [
+            'class' => 'col-md-6 col-lg-4'
+            ],
             'tplFilter.outer.default'=> 'dtls.tpl.mFilter2.filter.outer'
             'tplFilter.row.default'=> 'dtls.tpl.mFilter2.filter.checkbox'
             ]}
@@ -48,18 +53,4 @@
     </div>
 </div>
 
-{include 'dsmc_footer'}
-{include 'dsmc_script'}
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '#mse2_sort', function() {
-            var selected = $(this).find('option:selected');
-            var sort = selected.data('sort');
-            sort += mse2Config.method_delimeter + selected.val();
-            mse2Config.sort =  sort;
-            mSearch2.submit();
-        });
-    });
-</script>
-</body>
-</html>
+{/block}

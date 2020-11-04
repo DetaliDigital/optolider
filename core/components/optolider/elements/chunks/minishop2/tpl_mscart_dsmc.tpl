@@ -39,20 +39,12 @@
                         <form method="post" class="ms2_form" role="form">
                             <input type="hidden" name="key" value="{$product.key}"/>
                             <div class="form-group mb-0">
-                                <div class="input-group">
-                                            <span class="input_count_action input-group-text minus input-group-prepend" data-value="-1">
-                                                –
-                                            </span>
-                                    <input type="number" name="count" value="{$product.count}" class="form-control">
-                                    <span class="input_count_action input-group-text plus input-group-append" >
-                                                +
-                                            </span>
-                                    {if $product.min_count != 0}
-                                        <div class="min_count text-center col-12"><small>Заказ от <b>{$product.min_count} шт</b></small></div>
-                                    {else}
-                                        <div class="min_count text-center col-12"><small>Заказ от <b>1 шт</b></small></div>
-                                    {/if}
-                                </div>
+                                <input class="form-control form-spinner" name="count" value="{$product.count}" min="1" max="1000" step="1">
+                                {if $product.min_count != 0}
+                                <div class="min_count text-center col-12"><small>Заказ от <b>{$product.min_count} шт</b></small></div>
+                                {else}
+                                <div class="min_count text-center col-12"><small>Заказ от <b>1 шт</b></small></div>
+                                {/if}
                                 <button class="btn" type="submit" name="ms2_action" value="cart/change">↻</button>
                             </div>
                         </form>

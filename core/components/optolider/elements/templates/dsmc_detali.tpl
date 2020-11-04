@@ -11,11 +11,11 @@
 {unset $saleprice.1}
 {/if}
 
-<div class="main my-4" itemprop="mainContentOfPage">
+<div class="main pt-4" itemprop="mainContentOfPage">
     <div class="container">
         <span itemprop="breadcrumb">{include 'dsmc_crumbs'}</span>
     </div>
-    <div itemscope itemtype="http://schema.org/Product">
+    <div class="my-5" itemscope itemtype="http://schema.org/Product">
         <div id="msProduct" class="align-items-center">
             <div class="container">
                 {if 'pagetitle' | resource ?}
@@ -93,21 +93,7 @@
                                             </div>
                                             <div class="col-6 d-flex flex-column">
                                                 <label class="col-form-label small text-light">Кол-во товара:</label>
-                                                <div class="form-group mb-0">
-                                                    <div class="input-group">
-                                                <span class="input_count_action input-group-text minus input-group-prepend"
-                                                      data-value="-1">
-                                                    –
-                                                </span>
-                                                        <input type="number" name="count"
-                                                               value="{if $_modx->resource.min_count != ''}{$_modx->resource.min_count}{else}1{/if}"
-                                                               id="product_price" class="form-control text-center">
-                                                        <span class="input_count_action input-group-text plus input-group-append">
-                                                    +
-                                                </span>
-                                                    </div>
-                                                </div>
-
+                                                <input class="form-control form-spinner" name="count" value="1" min="1" max="1000" step="1">
 
                                                 {if $_modx->resource.min_count != ''}
                                                 <div class="min_count text-center"><small>Заказ от
@@ -242,73 +228,46 @@
         </div>
     </div>
 
-    <div class="section-tabs my-5">
-
+    <div class="section-tabs">
         {'!seoTabs' | snippet : [
         'tpl' => 'dsmc.tpl.seoTabs'
         ]}
-
     </div>
 
-    {if $_modx->user.id > 0}
-
-    {'preTools' | snippet : [
+    {'!preTools' | snippet : [
     'parents' => 'parent' | resource,
     'prepareSnippet' => 'prepareSnippet',
     'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
-    'tpl' => 'dsmc.msProducts.showcase.row',
-    'limit' => 8,
+    'tpl' => 'dsmc.msProducts.row',
+    'limit' => 4,
     'rowPlaceholders' => [
-    'class' => 'col-lg-3'
+    'class' => 'swiper-slide'
     ],
     'wrapperPlaceholders' => [
-    'class_section' => 'bg-white'
-    'title' => '<span class="text-info">Похожие</span> товары',
-    'swiper' => 0
+    'class_section' => 'bg-white py-5'
+    'title' => '<h3 class="h2"><span class="text-info">Похожие</span> товары</h3>' ,
+    'swiper' => 1
     ]
     ]}
 
-    {/if}
+    {set $idv = '!addToViewed' | snippet}
 
-    <div class="container">
-        <h3 class="mt-5 mb-2 h2"><span class="text-primary">Похожие</span> товары</h3>
-        <div class="row catalog_0718 card_similar_block">
-
-            {'msProducts' | snippet : [
-            'prepareSnippet' => 'prepareSnippet',
-            'tpl'=> 'row.product.dsmc',
-            'resources' => ''
-            'sortBy' => 'RAND()'
-            'limit' => 4,
-            'parents' => $_modx->resource.tv_parent,
-            'includeContent' => 1,
-            'includeTVs' =>
-            'pol,mehanik,popular,price,new,sale,korpus,braslet,brand,oldprice,razmers,color,sostav,notavailable'
-            'prepareTVs' => 1,
-            'processTVs' => 1
-            ]}
-
-        </div>
-
-        {set $idv = '!addToViewed' | snippet}
-
-        <h3 class="mt-5 mb-2 h2">Вы <span class="text-danger">смотрели</span></h3>
-        <div class="row catalog_0718 card_viewed_block">
-            {'!msProducts' | snippet : [
-            'prepareSnippet' => 'prepareSnippet',
-            'tpl'=> 'row.product.dsmc',
-            'resources' => $idv,
-            'sortBy' => 'RAND()'
-            'limit' => 4,
-            'parents' => 2,
-            'includeContent' => 1,
-            'includeTVs' =>
-            'pol,mehanik,popular,price,new,sale,korpus,braslet,brand,oldprice,razmers,color,sostav,notavailable'
-            'prepareTVs' => 1,
-            'processTVs' => 1
-            ]}
-        </div>
-    </div>
+    {'preTools' | snippet : [
+    'parents' => 2
+    'resources' => $idv,
+    'prepareSnippet' => 'prepareSnippet',
+    'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
+    'tpl' => 'dsmc.msProducts.row',
+    'limit' => 4,
+    'rowPlaceholders' => [
+    'class' => 'swiper-slide'
+    ],
+    'wrapperPlaceholders' => [
+    'class_section' => 'bg-light py-5'
+    'title' => '<h3 class="h2">Вы <span class="text-danger">смотрели</span></h3>' ,
+    'swiper' => 1
+    ]
+    ]}
 
     {'!mvtForms2' | snippet : [
     'form'=>'one_click',
