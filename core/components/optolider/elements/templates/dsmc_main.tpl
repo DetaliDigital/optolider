@@ -1,7 +1,7 @@
 {extends 'template:Базовый шаблон'}
 
 {block 'main'}
-<div class="main my-3 top-banner" id="top-banner">
+<div class="main my-5 top-banner" id="top-banner">
     <div class="container">
         <div class="row">
             <div class="sidebar col-md-4 col-lg-3 order-2 order-md-1 bottom-part position-initial">
@@ -75,8 +75,6 @@
 </div>
 {/if}
 
-{if $_modx->user.id > 0}
-
 {'preTools' | snippet : [
 'parents' => 'tv_main_section_1_parent' | tv | fromJSON | join,
 'prepareSnippet' => 'prepareSnippet',
@@ -92,7 +90,7 @@
 ],
 'wrapperPlaceholders' => [
 'class_section' => 'section py-5',
-'color_section' => '#F4F5FE'
+'color_section' => '#EAF4F0'
 'title' => 'tv_main_section_1_parent' | dsmc_parent_name,
 'more' => 1,
 'parent' => 'tv_main_section_1_parent' | tv | fromJSON | join
@@ -117,7 +115,7 @@
 'wrapperPlaceholders' => [
 'class_section' => 'section py-5'
 'title' => 'tv_main_section_2_parent' | dsmc_parent_name,
-'color_section' => '#EAF4F0'
+'color_section' => '#AFDBFF'
 'more' => 1,
 'parent' => 'tv_main_section_2_parent' | tv | fromJSON | join
 'swiper' => 1
@@ -146,8 +144,6 @@
 'swiper' => 1
 ]
 ]}
-
-{/if}
 
 <section class="action-section mt-0 mb-5">
     <div class="container">

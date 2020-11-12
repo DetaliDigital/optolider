@@ -53,6 +53,9 @@
     <meta name='yandex-verification' content='6e3eed18d33c0024'/>
     <script src="https://vk.com/js/api/openapi.js?145"></script>
     <meta name="google-site-verification" content="e-57Un33NFS53Zyrc4NKauNPxoAd1f4HBJ7R1OAf_hw"/>
+    <link rel="stylesheet"
+          href="{'assets_url' | option}components/optolider/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.css"
+          id="theme-stylesheet">
     <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
     {$_modx->config.analytics}
 </head>
@@ -379,6 +382,43 @@
     </div>
 </footer>
 
+<div class="share-button on-up">
+    <a href="{'whatsapp' | option}" class="item">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <a href="{'viber' | option}" class="item">
+        <i class="fab fa-viber" aria-hidden="true"></i>
+    </a>
+    <a href="https://vk.com/im?sel=-85098905" class="item">
+        <i class="fab fa-vk" aria-hidden="true"></i>
+    </a>
+    <div class="item open_share">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </div>
+</div>
+
+<div class="back-to-top on-up top d-flex">
+    <i class="fas fa-angle-up"></i>
+</div>
+
+<div class="share-block-absolute">
+    <!-- filter -->
+    <svg>
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="shadow"/>
+                <feOffset in="shadow" dx="0" dy="0" result="shadow"/>
+                <feColorMatrix in="shadow" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                               result="shadow2"/>
+                <feBlend in="SourceGraphic" in2="shadow2"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- back-to-top -->
+
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"
         integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -418,8 +458,12 @@
     injectSvgSprite('{'assets_url' | option}components/optolider/dist/icons/svg-sprite.svg');
 </script>
 
+
 <!-- Swiper Carousel -->
 <script src="{'assets_url' | option}components/optolider/dist/vendor/swiper/js/swiper.min.js"></script>
+
+<!-- Fancybox-->
+<script src="{'assets_url' | option}components/optolider/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 
 <!-- Input Spinner -->
 <script src="{'assets_url' | option}components/optolider/node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js"></script>

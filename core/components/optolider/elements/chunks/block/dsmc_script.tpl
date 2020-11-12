@@ -5,6 +5,9 @@
 <script type="text/javascript" src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/themes.js"></script>
 
+<!-- Fancybox-->
+<script src="{'assets_url' | option}components/okli/dist/optolider/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+
 <script src="js/slick.min.js"></script>
 <script src="js/custom.js?{filemtime($modx->getOption('base_path') ~ 'js/custom.js')}"></script>
 

@@ -37,6 +37,7 @@ $(function () {
         $(this).find('.mvtforms2-modal-title').html(`${ title } <span class="text-success">${ product }</span>`);
     });
 
+
     document.querySelectorAll('.container').forEach(n => {
         const similarBaseCarusel = new Swiper(n.querySelector('.similar-base-carusel'), {
             slidesPerView: 1.1,
@@ -78,4 +79,60 @@ $(function () {
             },
         });
     });
+
+    if ($('.detail-gallery').length)
+    {
+        var galleryTop = new Swiper('.detail-gallery', {
+            direction: 'vertical',
+            spaceBetween: 10,
+        })
+        var galleryThumbs = new Swiper('.detail-gallery-trumps', {
+            direction: 'vertical',
+            spaceBetween: 10,
+            // loop: true, bug too
+            centeredSlides: true,
+            slidesPerView: 5,
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            slideActiveClass: 'active',
+        })
+        galleryTop.controller.control = galleryThumbs
+        galleryThumbs.controller.control = galleryTop
+    }
+
+    // =====================================================
+    //      Social Share Buttons
+    // =====================================================
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > $(this).height()) {
+            $(".on-up").addClass("active");
+        } else {
+            $(".on-up").removeClass("active");
+        }
+    });
+
+    $(".on-up.top").click(function () {
+        $("html, body").stop().animate({scrollTop: 0}, "slow", "swing");
+    });
+
+    var share = document.querySelector('.share-button');
+    var isOpened = false;
+    document.querySelector('.open_share').addEventListener('click', function(){
+        if(!isOpened){
+            share.classList.add('open');
+            isOpened = true;
+        }
+        else{
+            share.classList.remove('open');
+            isOpened = false;
+        }
+    });
+
+    var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (is_safari) {
+        $('feGaussianBlur').attr('stdDeviation', 0);
+    }
 });
+

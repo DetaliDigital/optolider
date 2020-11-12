@@ -1,4 +1,36 @@
+/*
+Navigations
+*/
+
 .nav {
+  .level {
+    &.hover-bg-danger {
+      &:hover {
+        background-color: $danger !important;
+        .icon {
+          &.icon-shape {
+            background-color: $white;
+          }
+          .svg-icon.svg-icon-white {
+            fill: $danger !important;
+          }
+        }
+      }
+    }
+    &.nav-promo {
+      a {
+        color: $white !important;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      &.nav-promo {
+        a {
+          color: $danger !important;
+        }
+      }
+    }
+  }
   &.nav-link-lg {
     .nav-item {
       .nav-link {

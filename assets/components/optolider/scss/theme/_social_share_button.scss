@@ -1,0 +1,106 @@
+.share-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: url(#goo);
+
+  &.on-up {
+    transition: all .25s ease;
+    position: fixed;
+    z-index: 15;
+    bottom: 95px;
+    right: -150px;
+    cursor: pointer;
+
+    &.active {
+      right: 15px;
+
+      &:not(.open):hover {
+        right: 15px;
+        bottom: 100px;
+      }
+    }
+  }
+
+  .item {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 50%;
+    width: 2.71428571rem;
+    height: 2.71428571rem;
+    font-size: 1.9rem;
+    background-color: $primary;
+    color: #fff;
+    transition: all 400ms ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item:nth-child(1) {
+    transition-delay: 0ms;
+    background-color: #43d854;
+  }
+
+  .item:nth-child(2) {
+    transition-delay: 150ms;
+    background-color: #bc27ab;
+  }
+
+  .item:nth-child(3) {
+    transition-delay: 300ms;
+    background-color: #2787F5;
+    font-size: 1.65rem;
+  }
+
+  .open_share {
+    transform: scale(1.2);
+    transition: all 700ms ease-out;
+  }
+}
+
+.open .open_share {
+  transform: scale(0.9);
+  transition: all 700ms ease-out;
+}
+
+.open .item:nth-child(1) {
+  transform: translate(-55px, -25px);
+}
+
+.open .item:not(:last-child):hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.open .item:nth-child(2) {
+  transform: translate(0, -60px);
+  transition-delay: 150ms;
+  background-color: 000;
+}
+
+.open .item:nth-child(3) {
+  transform: translate(-60px, 40px);
+  transition-delay: 300ms;
+}
+
+#jvlabelWrap {
+  bottom: -40px !important;
+}
+
+body .__jivoMobileButton {
+  display: none !important;
+}
+
+.share-block-absolute {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}

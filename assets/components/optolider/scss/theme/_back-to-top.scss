@@ -1,0 +1,33 @@
+/*
+* ===================================================
+*     Back to top
+* ===================================================
+*/
+
+.back-to-top {
+  background: #ffdc77;
+  color: $success;
+  border-radius: 50%;
+  width: 2.71428571rem;
+  height: 2.71428571rem;
+  justify-content: center;
+  align-items: center;
+
+  &.on-up {
+    transition: all .25s ease;
+    position: fixed;
+    z-index: 15;
+    bottom: 25px;
+    right: -100px;
+    cursor: pointer;
+
+    &.active {
+      right: 15px;
+
+      &:hover {
+        right: 15px;
+        bottom: 30px;
+      }
+    }
+  }
+}

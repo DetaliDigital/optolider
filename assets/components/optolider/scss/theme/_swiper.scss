@@ -160,3 +160,38 @@
     min-height: 500px;
   }
 }
+
+.detail-carousel {
+  height: 450px;
+  display: flex;
+  flex-direction: row-reverse;
+  .swiper-slide {
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+  }
+
+  // .Gallery
+  .detail-gallery-trumps {
+    flex-basis: 100px;
+
+    .swiper-slide {
+      opacity: 0.9;
+      border: 2px solid;
+      border-color: $light;
+      width: 75px !important;
+      height: 75px !important;
+      &.active {
+        opacity: 1;
+        border: 2px solid;
+        border-color: $secondary;
+      }
+    }
+  }
+}
+
+

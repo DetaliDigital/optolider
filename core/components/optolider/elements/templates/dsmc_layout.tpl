@@ -20,10 +20,11 @@
             <meta name="description" content="{$_pls['dsmc_description']}"/>
         {/if}
     {/if}
-
+    <link rel="stylesheet"
+          href="{'assets_url' | option}components/optolider/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.css"
     <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/css/style.default.css">
 
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" conte nt="width=device-width">
     <meta name="Document-state" content="Dynamic"/>
     <meta name="Revizit-after" content="3 days"/>
 
@@ -195,5 +196,8 @@
 
 {include 'dsmc_footer'}
 {include 'dsmc_script'}
+
+
+
 </body>
 </html>

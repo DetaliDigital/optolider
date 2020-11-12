@@ -24,23 +24,25 @@
                 <div class="d-flex flags">
 
                     {foreach $_modx->resource.types as $item}
-                        {switch $item}
-                        {case 'Новинка'}
-                        <img src="css/images/ic.png">
-                        {case 'Избранное'}
-                        <img src="css/images/ic2.png">
-                        {case 'Распродажа'}
-                        <img src="css/images/ic3.png">
-                        {case 'Одностраничникам'}
-                        <img src="css/images/ic4.png">
-                        {/switch}
+                    {switch $item}
+                    {case 'Новинка'}
+                    <img src="css/images/ic.png">
+                    {case 'Избранное'}
+                    <img src="css/images/ic2.png">
+                    {case 'Распродажа'}
+                    <img src="css/images/ic3.png">
+                    {case 'Одностраничникам'}
+                    <img src="css/images/ic4.png">
+                    {/switch}
                     {/foreach}
 
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-5">
-                        [[!msGalleryZoom]]
-                        [[!msGallery?&tpl=`tpl.msGalZoom_three_vert_dsmc`]]
+
+                        {'msGallery' | snippet : [
+                        'tpl' => 'dsmc.msGallery.row'
+                        ]}
 
                     </div>
                     <div class="col-12 col-md-12 col-lg-7">
@@ -93,7 +95,8 @@
                                             </div>
                                             <div class="col-6 d-flex flex-column">
                                                 <label class="col-form-label small text-light">Кол-во товара:</label>
-                                                <input class="form-control form-spinner" name="count" value="1" min="1" max="1000" step="1">
+                                                <input class="form-control form-spinner" name="count" value="1" min="1"
+                                                       max="1000" step="1">
 
                                                 {if $_modx->resource.min_count != ''}
                                                 <div class="min_count text-center"><small>Заказ от
