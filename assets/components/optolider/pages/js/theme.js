@@ -82,22 +82,42 @@ $(function () {
 
     if ($('.detail-gallery').length)
     {
-        var galleryTop = new Swiper('.detail-gallery', {
+        let galleryThumbs = new Swiper('.detail-gallery-trumps', {
             direction: 'vertical',
-            spaceBetween: 10,
-        })
-        var galleryThumbs = new Swiper('.detail-gallery-trumps', {
-            direction: 'vertical',
-            spaceBetween: 10,
-            // loop: true, bug too
-            centeredSlides: true,
-            slidesPerView: 5,
-            touchRatio: 0.2,
+            spaceBetween: 15,
+            slidesPerView: 4,
+            //loop: true,
+            //loopedSlides: 4,
+            //centeredSlides: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            centerInsufficientSlides: true,
             slideToClickedSlide: true,
-            slideActiveClass: 'active',
+            touchRatio: 0,
         })
-        galleryTop.controller.control = galleryThumbs
-        galleryThumbs.controller.control = galleryTop
+        let galleryTop = new Swiper('.detail-gallery', {
+            effect: 'fade',
+            touchRatio: 0,
+            thumbs: {
+                swiper: galleryThumbs
+            },
+            on: {
+                slideChange: function () {
+                    let activeIndex = this.activeIndex + 1;
+
+                    let activeSlide = document.querySelector(`.detail-gallery-trumps .swiper-slide:nth-child(${activeIndex})`);
+                    let nextSlide = document.querySelector(`.detail-gallery-trumps .swiper-slide:nth-child(${activeIndex + 1})`);
+                    let prevSlide = document.querySelector(`.detail-gallery-trumps .swiper-slide:nth-child(${activeIndex - 1})`);
+
+                    if (nextSlide && !nextSlide.classList.contains('swiper-slide-visible')) {
+                        this.thumbs.swiper.slideNext()
+                    } else if (prevSlide && !prevSlide.classList.contains('swiper-slide-visible')) {
+                        this.thumbs.swiper.slidePrev()
+                    }
+
+                }
+            }
+        })
     }
 
     // =====================================================

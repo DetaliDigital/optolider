@@ -1,4 +1,4 @@
-<div class="detail-carousel">
+<div class="detail-carousel my-5">
     <div class="detail-gallery swiper-container">
         <div class="swiper-wrapper">
             {if $files?}

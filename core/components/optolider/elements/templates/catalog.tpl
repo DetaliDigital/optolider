@@ -29,6 +29,7 @@
             'cacheExpires'=>0,
             'mode' => 2,
             'up' => 1,
+            'showLog' => 0,
             'prepareSnippet' => 'prepareSnippet',
             'snippet' => 'mFilter2',
             'tplOuter' => 'tpl.mFilter2.filter.dsmc',
