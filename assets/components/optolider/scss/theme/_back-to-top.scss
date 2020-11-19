@@ -5,8 +5,8 @@
 */
 
 .back-to-top {
-  background: #ffdc77;
-  color: $success;
+  background: $primary;
+  color: $white;
   border-radius: 50%;
   width: 2.71428571rem;
   height: 2.71428571rem;
@@ -20,6 +20,7 @@
     bottom: 25px;
     right: -100px;
     cursor: pointer;
+    z-index: 1;
 
     &.active {
       right: 15px;

@@ -383,15 +383,28 @@
 </footer>
 
 <div class="share-button on-up">
+
+
+    {if 'whatsapp' | option ?}
     <a href="{'whatsapp' | option}" class="item">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
+    {/if}
+    {if 'viber' | option ?}
     <a href="{'viber' | option}" class="item">
         <i class="fab fa-viber" aria-hidden="true"></i>
     </a>
-    <a href="https://vk.com/im?sel=-85098905" class="item">
+    {/if}
+    {if 'im_vk' | option ?}
+    <a href="{'im_vk' | option}" class="item">
         <i class="fab fa-vk" aria-hidden="true"></i>
     </a>
+    {/if}
+    {if 'telegram' | option ?}
+    <a href="{'telegram' | option}" class="item">
+        <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+    </a>
+    {/if}
     <div class="item open_share">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </div>

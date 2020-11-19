@@ -57,7 +57,13 @@
   .item:nth-child(3) {
     transition-delay: 300ms;
     background-color: #2787F5;
-    font-size: 1.65rem;
+    font-size: 1.25rem;
+  }
+
+  .item:nth-child(4) {
+    transition-delay: 300ms;
+    background-color: #0088cc;
+    font-size: 1.25rem;
   }
 
   .open_share {
@@ -72,23 +78,28 @@
 }
 
 .open .item:nth-child(1) {
-  transform: translate(-55px, -25px);
-}
-
-.open .item:not(:last-child):hover {
-  opacity: 0.9;
-  text-decoration: none;
+  transform: translate(-65px, 35px);
 }
 
 .open .item:nth-child(2) {
-  transform: translate(0, -60px);
+  transform: translate(0,-70px);
   transition-delay: 150ms;
   background-color: 000;
 }
 
 .open .item:nth-child(3) {
-  transform: translate(-60px, 40px);
+  transform: translate(-65px,-35px);
   transition-delay: 300ms;
+}
+
+.open .item:nth-child(4) {
+  transform: translate(0px,70px);
+  transition-delay: 300ms;
+}
+
+.open .item:not(:last-child):hover {
+  opacity: 0.9;
+  text-decoration: none;
 }
 
 #jvlabelWrap {

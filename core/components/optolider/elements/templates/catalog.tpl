@@ -9,12 +9,6 @@
 
         <div class="catalog_0718">
 
-            {if $_modx->user.id > 0}
-                {'!mSearch2' | snippet : [
-                'returnIds' => 1
-                'limit' => 0
-                ]}
-            {/if}
 
             {if $.get['query'] ?}
                 {set $dsmc_parent = 2}
