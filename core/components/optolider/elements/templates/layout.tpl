@@ -203,7 +203,7 @@
 {block 'main'}
 {/block}
 
-<footer>
+<footer itemscope itemtype="https://schema.org/Organization">
     <div class="footer_main bg-dark py-5 text-light footer-top">
         <div class="container">
             <div class="row">
@@ -310,7 +310,7 @@
 
 			Россия
 			</span>
-                        <p class="mb-2" itemprop="streetAddress">Оптолидер в регионах</p>
+                        <p class="mb-2">Оптолидер в регионах</p>
                         <p class="mb-0">
                             <a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9.+]|/': ''}"
                                itemprop="telephone">{$_modx->config.phone_4}</a>
