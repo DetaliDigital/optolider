@@ -22,5 +22,14 @@ switch ($modx->event->name) {
             }
         });
 
+        $fenom->addModifier('dsmc_msie_token', function ($input) use ($modx) {
+            if ($input) {
+
+                $token = $modx->getObject('MsiePreset' , ['id' => $input]);
+                return 'https://optolider.ru/assets/components/msimportexport/do.php?token=' . $token->get('token');
+
+            }
+        });
+
         break;
 }

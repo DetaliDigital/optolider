@@ -1,7 +1,7 @@
 <?php
 class customTvssComboGetgetmseiProfileProcessor extends modObjectGetListProcessor
 {
-    public $classKey = 'MsiePresetsFields';
+    public $classKey = 'MsiePreset';
     //public $languageTopics = array('resource');
     public $defaultSortField = 'id';
     public $defaultSortDirection = 'ASC';
