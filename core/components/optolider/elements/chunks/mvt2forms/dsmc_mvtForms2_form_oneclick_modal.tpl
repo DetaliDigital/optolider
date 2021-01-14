@@ -28,7 +28,7 @@
 
                     <div class="form-group">
                         <label>Количество товара, шт.</label>
-                        <input class="form-control form-control-lg mvtFormPhone" name="{$formID}_count" type="text" placeholder="1 шт *">
+                        <input class="form-control form-control-lg" name="{$formID}_count" type="text" placeholder="1 шт *">
                         <small class="form-text text-muted text-sm">Минимальная сумма заказа <span class="text-black-50 font-weight-bold">{'min_payment' | option} руб.</span></small>
                     </div>
 
