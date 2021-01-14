@@ -307,32 +307,7 @@
 </div>
 {/if}
 
-<section class="py-5 catalog-section"  id="popular-catalog">
-    <div class="catalog-section-head">
-        <div class="container">
-            <h2><span class="text-danger">Новый год</span> уже на носу</h2>
-        </div>
-    </div>
 
-    <div class="container">
-
-        <div class="row catalog_0718">
-            {'!getCache' | snippet : [
-            'element' => 'msProducts',
-            'cacheKey' => 'main_showcase',
-            'prepareSnippet' => 'prepareSnippet',
-            'tpl'=> 'row.product.dsmc',
-            'parents'=> 2,
-            'depth' => 5,
-            'limit' => 8,
-            'sortdir' => 'DESC',
-            'includeContent' => 0,
-            'includeTVs' => 'price,sale,new,dropshiping',
-            'tvFilters' => 'season_pop==1'
-            ]}
-        </div>
-    </div>
-</section>
 
 <section class="bg-light py-5">
     <div class="container">
