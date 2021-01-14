@@ -37,6 +37,11 @@ $(function () {
         $(this).find('.mvtforms2-modal-title').html(`${ title } <span class="text-success">${ product }</span>`);
     });
 
+    $(document).on('show.bs.modal','#listOrderProducts', function (e) {
+        let object = $(e.relatedTarget);
+        let title = object.data('title');
+        $(this).find('.listOrderProductsTitle').html(`Заказ № <span class="text-success">${ title }</span>`);
+    });
 
     document.querySelectorAll('.container').forEach(n => {
         const similarBaseCarusel = new Swiper(n.querySelector('.similar-base-carusel'), {

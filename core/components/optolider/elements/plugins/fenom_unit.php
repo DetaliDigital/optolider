@@ -13,12 +13,14 @@ switch ($modx->event->name) {
         });
 
         $fenom->addModifier('dsmc_parent_name', function ($input) use($modx) {
-            if ($input) {
+            if (!empty($input) && isset($input)) {
                 $id = implode(json_decode($modx->resource->getTVValue($input)));
-                $data = $modx->getObject('modResource' , $id);
 
-                $row = $data->get('longtitle') ?: $data->get('pagetitle');
-                return $row;
+                if (!empty($id)) {
+                    $data = $modx->getObject('modResource', $id);
+                    $row = $data->get('longtitle') ?: $data->get('pagetitle');
+                    return $row;
+                }
             }
         });
 

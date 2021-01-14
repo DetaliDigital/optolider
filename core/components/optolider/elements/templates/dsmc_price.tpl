@@ -23,6 +23,7 @@
                         </li>
                         {/foreach}
                     </ul>
+
                     <div class="py-5 small">
                         {'content' | resource}
                     </div>

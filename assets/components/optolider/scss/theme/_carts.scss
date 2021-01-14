@@ -1,0 +1,24 @@
+.cart-header {
+  padding: 1.2rem 2rem;
+  background: $gray-100;
+  font-weight: bold;
+}
+.cart-item {
+  padding: 1.5rem 1.2rem;
+  border-bottom: 1px solid $gray-200;
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+[id^="confirm-modal-"] {
+  .modal-header {
+    display: flex;
+    .modal-title {
+      order: 0;
+    }
+    .close {
+      order: 1;
+    }
+  }
+}

@@ -75,8 +75,9 @@
 </div>
 {/if}
 
-{'preTools' | snippet : [
-'parents' => 'tv_main_section_1_parent' | tv | fromJSON | join,
+
+{'!preTools' | snippet : [
+'parents' => 'tv_main_section_1_parent' | tv | fromJSON | join ?: 9999999,
 'prepareSnippet' => 'prepareSnippet',
 'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
 'tpl' => 'dsmc.msProducts.row',
@@ -98,9 +99,8 @@
 ]
 ]}
 
-
-{'preTools' | snippet : [
-'parents' => 'tv_main_section_2_parent' | tv | fromJSON | join,
+{'!preTools' | snippet : [
+'parents' => 'tv_main_section_2_parent' | tv | fromJSON | join ?: 9999999,
 'prepareSnippet' => 'prepareSnippet',
 'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
 'tpl' => 'dsmc.msProducts.row',
@@ -122,8 +122,8 @@
 ]
 ]}
 
-{'preTools' | snippet : [
-'parents' => 'tv_main_section_3_parent' | tv | fromJSON | join,
+{'!preTools' | snippet : [
+'parents' => 'tv_main_section_3_parent' | tv | fromJSON | join ?: 9999999,
 'prepareSnippet' => 'prepareSnippet',
 'tplWrapper' => 'dsmc.msProducts.showcase.wrapper',
 'tpl' => 'dsmc.msProducts.row',
@@ -221,7 +221,7 @@
                         <ul class="list-unstyled secrets_ul">
                             <li>
                                 <div class="icon"><img src="img/secret_icon1.png" alt="" /></div>
-                                <p>На сайте вы найдете <a href="[[~122]]" target="_blank">самые популярные товары из Китая</a>, которые чаще всего интересуют пользователей социальных сетей. Сотрудники компании проводят мониторинг запросов покупателей, чтобы оперативно реагировать на потребности каждого.</p>
+                                <p>На сайте вы найдете самые популярные товары из Китая, которые чаще всего интересуют пользователей социальных сетей. Сотрудники компании проводят мониторинг запросов покупателей, чтобы оперативно реагировать на потребности каждого.</p>
                             </li>
                             <li>
                                 <div class="icon"><img src="img/secret_icon3.png" alt="" /></div>

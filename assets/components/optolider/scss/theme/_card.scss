@@ -166,3 +166,10 @@
     }
   }
 }
+
+@include media-breakpoint-down(xs) {
+  .card-img-profile {
+    height: 450px;
+    object-fit: cover;
+  }
+}

@@ -6,22 +6,20 @@
     <base href="{$_modx->config.site_url}">
 
     {if 'template' | resource == 45 || 'template' | resource == 8}
-
-    <title>{'st.title' | placeholder}</title>
-    <meta name="description" content="{'st.description' | placeholder}"/>
-
+        <title>{'st.title' | placeholder}</title>
+        <meta name="description" content="{'st.description' | placeholder}"/>
     {else}
 
-    {if $_modx->resource.title != ''}
-    <title>{$_modx->resource.title}</title>
-    {else}
-    <title>{$_pls['dsmc_title']}</title>
-    {/if}
-    {if $_modx->resource.desc != ''}
-    <meta name="description" content="{$_modx->resource.desc}"/>
-    {else}
-    <meta name="description" content="{$_pls['dsmc_description']}"/>
-    {/if}
+        {if $_modx->resource.title != ''}
+            <title>{$_modx->resource.title}</title>
+        {else}
+            <title>{$_pls['dsmc_title']}</title>
+        {/if}
+        {if $_modx->resource.desc != ''}
+            <meta name="description" content="{$_modx->resource.desc}"/>
+        {else}
+            <meta name="description" content="{$_pls['dsmc_description']}"/>
+        {/if}
 
     {/if}
 
@@ -72,8 +70,7 @@
                         'element' => 'pdoMenu'
                         'cacheKey' => 'getMenu'
                         'tpl' => '@INLINE
-                        <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a>{$wrapper}</li>
-                        ',
+                        <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a>{$wrapper}</li>',
                         'parents' => 0,
                         'resources' => '1,73,76,229,12416,75,77,78',
                         'firstClass' => '',
@@ -119,29 +116,82 @@
                         </div>
                     </div>
                     <div class="header-column justify-content-start header_top2row_phone d-none d-lg-flex header-geolocation row">
-<span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark mr-2">{$_modx->config.phone}</a>
-<p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Санкт-Петербург</p>
-</span>
                         <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone_3 | preg_replace:'/[^0-9.+]|/': ''}"
-   class="text-dark mr-2">{$_modx->config.phone_3}</a>
-<p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Екатеринбург</p>
-</span>
+                        <a href="tel:{$_modx->config.phone | preg_replace:'/[^0-9.+]|/': ''}"
+                           class="text-dark mr-2">{$_modx->config.phone}</a>
+                        <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Санкт-Петербург</p>
+                        </span>
                         <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9.+]|/': ''}"
-   class="text-dark mr-2">{$_modx->config.phone_2}</a>
-<p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Москва</p>
-</span>
+                        <a href="tel:{$_modx->config.phone_3 | preg_replace:'/[^0-9.+]|/': ''}"
+                           class="text-dark mr-2">{$_modx->config.phone_3}</a>
+                        <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Екатеринбург</p>
+                        </span>
                         <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
-<a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9.+]|/': ''}"
-   class="text-dark mr-2">{$_modx->config.phone_4}</a>
-<p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Россия</p>
-</span>
+                        <a href="tel:{$_modx->config.phone_2 | preg_replace:'/[^0-9.+]|/': ''}"
+                           class="text-dark mr-2">{$_modx->config.phone_2}</a>
+                        <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Москва</p>
+                        </span>
+                        <span class="d-none d-lg-flex justify-content-start align-items-center font-weight-semibold header_top2row_phone_number col-6">
+                        <a href="tel:{$_modx->config.phone_4 | preg_replace:'/[^0-9.+]|/': ''}"
+                           class="text-dark mr-2">{$_modx->config.phone_4}</a>
+                        <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Россия</p>
+                        </span>
                     </div>
-                    {'!msMiniCart' | snippet : [
-                    'tpl' => 'tpl.msMiniCart.dsmc.v2'
-                    ]}
+
+                    <div class="header-column justify-content-end">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a href="{'9663' | url}">
+                                    <svg class="svg-icon svg-icon-lightest">
+                                        <use xlink:href="#icon-smotreli"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                {if $_modx->user.id > 0}
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <svg class="svg-icon svg-icon-lightest">
+                                                <use xlink:href="#icon-login"></use>
+                                            </svg>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right mt-2 pt-0 shadow-sm"
+                                             aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header d-flex align-items-center py-3 pl-3 pr-5 mb-2">
+                                                <div>
+                                                <img class="avatar rounded-circle mr-2" src="{$_modx->user.photo}">
+                                                </div>
+                                            <div>
+                                                <span class="font-weight-semibold">{$_modx->user.fullname}</span><br>
+                                                <span class="text-sm text-success">Пользователь</span>
+                                            </div>
+                                            </div>
+                                            <a class="dropdown-item" href="{'13658' | url}">Профиль</a>
+                                            {*
+                                            <a class="dropdown-item" href="#">Избранное</a>
+                                            *}
+                                            <a class="dropdown-item" href="{'13659' | url}">История покупок</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="?action=auth/logout">Выйти</a>
+                                        </div>
+                                    </div>
+                                {else}
+                                    <a href="#" data-toggle="modal" data-target="#officeForm" id="dropdownMenuButton"
+                                       aria-haspopup="true" aria-expanded="false">
+                                        <svg class="svg-icon svg-icon-lightest">
+                                            <use xlink:href="#icon-login"></use>
+                                        </svg>
+                                    </a>
+                                {/if}
+                            </li>
+                            <li class="list-inline-item">
+                                {'!msMiniCart' | snippet : [
+                                'tpl' => 'dsmc.msMiniCart.dsmc.v3'
+                                ]}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -168,7 +218,7 @@
                                 class="fas fa-bars mr-3"></i>Каталог</span>
 
                     {if $_modx->resource.id != 1}
-                    {include 'menu_leftbar'}
+                        {include 'menu_leftbar'}
                     {/if}
                 </div>
 
@@ -382,33 +432,65 @@
     </div>
 </footer>
 
+<div class="modal fade" id="officeForm" tabindex="-1" aria-labelledby="officeFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <ul class="nav nav-pills" id="officeTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="authorization-tab" data-toggle="tab" href="#authorization"
+                           role="tab" aria-controls="authorization">Авторизация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="registration-tab" data-toggle="tab" href="#registration" role="tab"
+                           aria-controls="registration">Регистрация</a>
+                    </li>
+                </ul>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-lg-5 my-lg-4">
+                {'!OfficeAuth' | snippet : [
+                'tplLogin' => 'dsmc.Office.auth.login'
+                ]}
+                <div class="tab-content">
+                    <div class="tab-pane active" id="authorization" role="tabpanel" aria-labelledby="authorization-tab">
+                    </div>
+                    <div class="tab-pane" id="registration" role="tabpanel" aria-labelledby="authorization-tab">2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="share-button on-up">
 
-
     {if 'whatsapp' | option ?}
-    <a href="{'whatsapp' | option}" class="item">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    </a>
+        <a href="{'whatsapp' | option}" class="item">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
     {/if}
     {if 'viber' | option ?}
-    <a href="{'viber' | option}" class="item">
-        <i class="fab fa-viber" aria-hidden="true"></i>
-    </a>
+        <a href="{'viber' | option}" class="item">
+            <i class="fab fa-viber" aria-hidden="true"></i>
+        </a>
     {/if}
     {if 'im_vk' | option ?}
-    <a href="{'im_vk' | option}" class="item">
-        <i class="fab fa-vk" aria-hidden="true"></i>
-    </a>
+        <a href="{'im_vk' | option}" class="item">
+            <i class="fab fa-vk" aria-hidden="true"></i>
+        </a>
     {/if}
     {if 'telegram' | option ?}
-    <a href="{'telegram' | option}" class="item">
-        <i class="fab fa-telegram-plane" aria-hidden="true"></i>
-    </a>
+        <a href="{'telegram' | option}" class="item">
+            <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+        </a>
     {/if}
     <div class="item open_share">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </div>
 </div>
+
 
 <div class="back-to-top on-up top d-flex">
     <i class="fas fa-angle-up"></i>
@@ -471,6 +553,8 @@
     injectSvgSprite('{'assets_url' | option}components/optolider/dist/icons/svg-sprite.svg');
 </script>
 
+<!-- Input Mask -->
+<script src="{'assets_url' | option}components/optolider/dist/vendor/jquery-mask-plugin/jquery.mask.min.js"></script>
 
 <!-- Swiper Carousel -->
 <script src="{'assets_url' | option}components/optolider/dist/vendor/swiper/js/swiper.min.js"></script>

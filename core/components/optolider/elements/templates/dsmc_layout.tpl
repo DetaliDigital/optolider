@@ -120,6 +120,7 @@
                             <p class="text-1 line-height-1 mb-0 header_top2row_phone_sub"> —  Россия</p>
                             </span>
                     </div>
+
                     {'!msMiniCart' | snippet : [
                     'tpl' => 'tpl.msMiniCart.dsmc.v2'
                     ]}
