@@ -124,7 +124,7 @@
     <hr class="mt-4 mb-4"/>
     <div class="d-flex flex-column align-items-end justify-content-md-end mb-4">
         <div class="form-check mb-4 policy">
-            <input class="form-check-input" type="checkbox" name="policy" id="policy_1">
+            <input class="form-check-input" type="checkbox" checked name="policy" id="policy_1">
             <label class="form-check-label" for="defaultCheck1">
                 <span class="ml-2">Я согласен с условиями <a href="polzovatelskoe-soglashenie/" target="_blank">пользовательского соглашения</a></span>
             </label>
