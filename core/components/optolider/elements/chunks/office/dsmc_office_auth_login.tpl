@@ -72,7 +72,7 @@
                     {/if}
                 </label>
                 <div class="col-md-12">
-                    <input type="text" name="mobilephone" placeholder="" class="form-control form-control-lg"
+                    <input type="text" name="mobilephone" placeholder="" data-mask="+0 000 000 00 00" class="form-control form-control-lg"
                            id="office-auth-register-phone" value=""/>
                     <small class="form-text text-muted text-sm">{'office_auth_register_phone_desc' | lexicon}</small>
                 </div>
@@ -109,6 +109,30 @@
                     <input type="text" name="username" placeholder="" class="form-control form-control-lg"
                            id="office-register-form-username" value=""/>
                     <small class="form-text text-muted text-sm">{'office_auth_register_username_desc' | lexicon}</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="office-auth-register-fullname" class="col-md-12 col-form-label">
+                    {'office_auth_register_fullname' | lexicon}
+                </label>
+                <div class="col-md-12">
+                    <input type="text" name="fullname" placeholder="" class="form-control form-control-lg"
+                           id="office-register-form-fullname" value=""/>
+                    <small class="form-text text-muted text-sm">{'office_auth_register_fullname_desc' | lexicon}</small>
+                </div>
+            </div>
+            {set $services_options = ['Розничные покупки', 'Оптовые покупки', 'Организатор СП', 'Партнер по дропшиппингу']}
+            <div class="form-group row">
+                <label class="col-md-12 col-form-label">{'office_auth_register_services' | lexicon}</label>
+                <div class="col-md-12">
+                    <select name="services[]" id="office-auth-register-services" class="form-control form-control-lg" multiple="multiple" style="display: none;">
+                        {foreach $services_options as $option}
+                            {set $selected = ($option in list $services)}
+                            <option value="{$option}"{$selected ? ' selected' : ''}>{$option}</option>
+                        {/foreach}
+                    </select>
+                    <div class="help-block message">{$error_services}</div>
+                    <small class="form-text text-muted text-sm">{'office_auth_register_services_desc' | lexicon}</small>
                 </div>
             </div>
             <div class="form-group pt-5">

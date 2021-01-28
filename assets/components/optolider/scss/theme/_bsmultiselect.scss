@@ -1,0 +1,28 @@
+.dashboardcode-bsmultiselect {
+  .dropdown-menu {
+    padding: 1.5rem 0.75rem;
+    box-shadow: 0 0 .25rem rgba(38,38,38,.075)!important;
+    .custom-control {
+      label {
+        color: #868e96 !important;
+        font-weight: $font-weight-normal;
+      }
+    }
+  }
+  ul {
+    &.form-control {
+      > li {
+        &.badge {
+          display: flex;
+          align-items: center;
+          font-weight: $font-weight-normal;
+          .close {
+            padding-bottom: 0.5rem;
+            padding-left: 0.25rem;
+            color: $success;
+          }
+        }
+      }
+    }
+  }
+}

@@ -52,6 +52,9 @@
     <script src="https://vk.com/js/api/openapi.js?145"></script>
     <meta name="google-site-verification" content="e-57Un33NFS53Zyrc4NKauNPxoAd1f4HBJ7R1OAf_hw"/>
     <link rel="stylesheet"
+          href="{'assets_url' | option}components/optolider/dist/vendor/@dashboardcode/bsmultiselect/css/BsMultiSelect.min.css"
+          id="theme-stylesheet">
+    <link rel="stylesheet"
           href="{'assets_url' | option}components/optolider/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.css"
           id="theme-stylesheet">
     <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
@@ -160,7 +163,11 @@
                                              aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header d-flex align-items-center py-3 pl-3 pr-5 mb-2">
                                                 <div>
-                                                <img class="avatar rounded-circle mr-2" src="{$_modx->user.photo}">
+                                                {if $_modx->user.photo ?}
+                                                    <img class="avatar rounded-circle mr-2" src="{$_modx->user.photo}">
+                                                {else}
+                                                    <span class="avatar avatar-text rounded-circle bg-primary text-white mr-2 font-weight-bold">{$_modx->user.fullname | dsmc_user_initials}</span>
+                                                {/if}
                                                 </div>
                                             <div>
                                                 <span class="font-weight-semibold">{$_modx->user.fullname}</span><br>
@@ -558,6 +565,9 @@
 
 <!-- Swiper Carousel -->
 <script src="{'assets_url' | option}components/optolider/dist/vendor/swiper/js/swiper.min.js"></script>
+
+<!-- bsmultiselect -->
+<script src="{'assets_url' | option}components/optolider/dist/vendor/@dashboardcode/bsmultiselect/js/BsMultiSelect.min.js"></script>
 
 <!-- Fancybox-->
 <script src="{'assets_url' | option}components/optolider/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>

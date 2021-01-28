@@ -1,4 +1,9 @@
 .avatar {
   height: 2rem;
   width: 2rem;
+  &.avatar-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

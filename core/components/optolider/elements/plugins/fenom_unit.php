@@ -33,5 +33,19 @@ switch ($modx->event->name) {
             }
         });
 
+        $fenom->addModifier('dsmc_user_initials', function ($input) use ($modx) {
+            if ($input) {
+                $name = $input;
+                $arr = explode(' ', $name);
+
+                foreach ($arr as $item) {
+                    $initials[] = substr($item,0,2);
+                }
+
+                return implode('', $initials);
+
+            }
+        });
+
         break;
 }
