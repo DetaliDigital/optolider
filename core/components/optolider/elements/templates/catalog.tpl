@@ -9,16 +9,24 @@
 
         <div class="catalog_0718">
 
-
             {if $.get['query'] ?}
                 {set $dsmc_parent = 2}
                 {else}
                 {set $dsmc_parent = $dsmc_mspcs_where}
             {/if}
 
+            {switch 'id' | resource}
+                {case 1616}
+                {set $cached_element = 'filter_1616'}
+                {case 1617}
+                {set $cached_element = 'filter_1617'}
+            {/switch}
+
+
             {'!mCacher' | snippet : [
             'parents' => $dsmc_parent ?: 'id' | resource,
             'cached_element'=>'msPCS',
+            'cacheKey' => ($cached_element ?: 'filter'),
             'cacheExpires'=>0,
             'mode' => 2,
             'up' => 1,
