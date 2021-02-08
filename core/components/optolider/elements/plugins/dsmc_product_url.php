@@ -1,8 +1,8 @@
 <?php
 switch ($modx->event->name) {
 
-    // Documents
-    case 'OnBeforeDocFormSave':
+    // Documents OnBeforeDocFormSave   
+    case 'OnDocFormSave':
         if ($resource->get('class_key') == 'msProduct') {
 
             $uri = $modx->getOption('ms2_product_as_uri');
