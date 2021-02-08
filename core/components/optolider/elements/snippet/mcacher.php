@@ -18,7 +18,7 @@ unset($properties['filter_commands']);
 unset($properties['filter_modifiers']);
 
 //if (empty($cacheKey)) $cacheKey = $modx->getOption('cache_resource_key', null, 'resource');
-$cacheKey = 'filter';
+$cacheKey = $modx->getOption('cacheKey', $scriptProperties, 'filter');
 if (empty($cacheHandler)) $cacheHandler = $modx->getOption('cache_resource_handler', null, $modx->getOption(xPDO::OPT_CACHE_HANDLER, null, 'xPDOFileCache'));
 if (!isset($cacheExpires)) $cacheExpires = (integer) $modx->getOption('cache_resource_expires', null, $modx->getOption(xPDO::OPT_CACHE_EXPIRES, null, 0));
 
