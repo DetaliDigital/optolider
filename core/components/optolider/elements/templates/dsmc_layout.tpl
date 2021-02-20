@@ -198,7 +198,5 @@
 {include 'dsmc_footer'}
 {include 'dsmc_script'}
 
-
-
 </body>
 </html>

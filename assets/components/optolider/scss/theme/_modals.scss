@@ -1,0 +1,12 @@
+.modal-office {
+  .modal-header {
+    .close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show >.nav-link {
+      background-color: $success;
+    }
+  }
+}

@@ -4,9 +4,6 @@
         <form method="post" id="office-auth-login">
             <div class="form-group row">
                 <div class="col-md-12">
-                    <div class="alert alert-warning">
-                        {'сс_office_description' | option}
-                    </div>
                     <label for="office-auth-login-email" class="col-12 px-0 col-form-label">
                         {'office_auth_login_username' | lexicon}&nbsp;<span class="red">*</span>
                     </label>
@@ -39,13 +36,12 @@
                     <small class="form-text text-muted text-sm">{'office_auth_login_password_desc' | lexicon}</small>
                 </div>
             </div>
-            <div class="form-group row pt-5">
+            <div class="form-group pt-5">
                 <input type="hidden" name="action" value="auth/formLogin"/>
                 <input type="hidden" name="return" value=""/>
-                <div class="col-md-12">
-                    <button type="submit"
-                            class="btn btn-lg btn-success btn-block">{'office_auth_login_btn' | lexicon}</button>
-                </div>
+                <button type="submit"
+                        class="btn btn-lg btn-success btn-block">{'office_auth_login_btn' | lexicon}
+                </button>
             </div>
         </form>
     </div>
@@ -72,7 +68,8 @@
                     {/if}
                 </label>
                 <div class="col-md-12">
-                    <input type="text" name="mobilephone" placeholder="" data-mask="+0 000 000 00 00" class="form-control form-control-lg"
+                    <input type="text" name="mobilephone" placeholder="" data-mask="+0 000 000 00 00"
+                           class="form-control form-control-lg"
                            id="office-auth-register-phone" value=""/>
                     <small class="form-text text-muted text-sm">{'office_auth_register_phone_desc' | lexicon}</small>
                 </div>
@@ -125,7 +122,8 @@
             <div class="form-group row">
                 <label class="col-md-12 col-form-label">{'office_auth_register_services' | lexicon}</label>
                 <div class="col-md-12">
-                    <select name="services[]" id="office-auth-register-services" class="form-control form-control-lg" multiple="multiple" style="display: none;">
+                    <select name="services[]" id="office-auth-register-services" class="form-control form-control-lg"
+                            multiple="multiple" style="display: none;">
                         {foreach $services_options as $option}
                             {set $selected = ($option in list $services)}
                             <option value="{$option}"{$selected ? ' selected' : ''}>{$option}</option>

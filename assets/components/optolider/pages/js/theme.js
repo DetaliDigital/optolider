@@ -43,6 +43,10 @@ $(function () {
         $(this).find('.listOrderProductsTitle').html(`Заказ № <span class="text-success">${ title }</span>`);
     });
 
+    $('#registration-tab').click(function () {
+        $('#reset-tab').removeClass('active');
+    })
+
     document.querySelectorAll('.container').forEach(n => {
         const similarBaseCarusel = new Swiper(n.querySelector('.similar-base-carusel'), {
             slidesPerView: 1.1,

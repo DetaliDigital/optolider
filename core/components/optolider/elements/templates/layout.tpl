@@ -439,23 +439,34 @@
     </div>
 </footer>
 
-<div class="modal fade" id="officeForm" tabindex="-1" aria-labelledby="officeFormLabel" aria-hidden="true">
+<div class="modal fade modal-office" id="officeForm" tabindex="-1" aria-labelledby="officeFormLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <ul class="nav nav-pills" id="officeTab" role="tablist">
+            <div class="modal-header modal-header-background flex-column" style="background-image: url(upload/vendor/optoliders_modal_profile.jpg);">
+                <ul class="nav nav-pills px-3" id="officeTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="authorization-tab" data-toggle="tab" href="#authorization"
+                        <a class="nav-link active text-white font-weight-bold" id="authorization-tab" data-toggle="tab" href="#authorization"
                            role="tab" aria-controls="authorization">Авторизация</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="registration-tab" data-toggle="tab" href="#registration" role="tab"
+                        <a class="nav-link text-white font-weight-bold" id="registration-tab" data-toggle="tab" href="#registration" role="tab"
                            aria-controls="registration">Регистрация</a>
                     </li>
                 </ul>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x text-white" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </span>
                 </button>
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <div class="card-text text-white">
+                                    {'сс_office_description' | option}
+                                </div>
+                            </div>
+                        </div>
             </div>
             <div class="modal-body mx-lg-5 my-lg-4">
                 {'!OfficeAuth' | snippet : [
