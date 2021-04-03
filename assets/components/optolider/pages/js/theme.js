@@ -43,9 +43,10 @@ $(function () {
         $(this).find('.listOrderProductsTitle').html(`Заказ № <span class="text-success">${ title }</span>`);
     });
 
-    $('#registration-tab').click(function () {
-        $('#reset-tab').removeClass('active');
-    })
+    $('[data-type="reset"]').click((e) => {
+        e.preventDefault();
+        $('#office-reset').toggle().find('#office-login-form-password').val();
+    });
 
     document.querySelectorAll('.container').forEach(n => {
         const similarBaseCarusel = new Swiper(n.querySelector('.similar-base-carusel'), {

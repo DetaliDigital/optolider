@@ -5,6 +5,8 @@
 <script type="text/javascript" src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/themes.js"></script>
 
+<script type="text/javascript" src="https://cloudparser.ru/widget/script?hash=da9ca15bac3ba23edabed333f6cdef6c5b6a82d9" async></script>
+
 <!-- Fancybox-->
 <script src="{'assets_url' | option}components/okli/dist/optolider/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 

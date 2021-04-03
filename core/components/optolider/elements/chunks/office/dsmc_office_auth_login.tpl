@@ -26,7 +26,7 @@
                     </p>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row" id="office-reset">
                 <label for="office-auth-login-password" class="col-md-12 col-form-label">
                     {'office_auth_login_password' | lexicon}
                 </label>
@@ -39,9 +39,18 @@
             <div class="form-group pt-5">
                 <input type="hidden" name="action" value="auth/formLogin"/>
                 <input type="hidden" name="return" value=""/>
-                <button type="submit"
-                        class="btn btn-lg btn-success btn-block">{'office_auth_login_btn' | lexicon}
-                </button>
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6">
+                    <button type="submit"
+                            class="btn btn-lg btn-success btn-block">{'office_auth_login_btn' | lexicon}
+                    </button>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="#" class="text-sm text-dark" data-type="reset" data-button="Востоновить пороль">
+                            Забыли пароль?
+                        </a>
+                    </div>
+                </div>
             </div>
         </form>
     </div>

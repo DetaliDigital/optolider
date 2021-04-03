@@ -26,7 +26,9 @@
     <meta name="viewport" content="width=device-width">
     <meta name="Document-state" content="Dynamic"/>
     <meta name="Revizit-after" content="3 days"/>
-
+    <meta name="google-site-verification" content="e-57Un33NFS53Zyrc4NKauNPxoAd1f4HBJ7R1OAf_hw" />
+    
+    
     <link rel="stylesheet" href="{'assets_url' | option}components/optolider/dist/fonts/stylesheet.css">
     <link rel="stylesheet"
           href="{'assets_url' | option}components/optolider/dist/vendor/slick-carousel/slick/slick.css">
@@ -50,7 +52,7 @@
 
     <meta name='yandex-verification' content='6e3eed18d33c0024'/>
     <script src="https://vk.com/js/api/openapi.js?145"></script>
-    <meta name="google-site-verification" content="e-57Un33NFS53Zyrc4NKauNPxoAd1f4HBJ7R1OAf_hw"/>
+
     <link rel="stylesheet"
           href="{'assets_url' | option}components/optolider/dist/vendor/@dashboardcode/bsmultiselect/css/BsMultiSelect.min.css"
           id="theme-stylesheet">
@@ -234,8 +236,8 @@
                                 class="badge badge-secondary ml-2">New</span></a>
                     <a href="50-xitov/" class="btn btn-danger label-button">50 хитов<span
                                 class="badge badge-secondary ml-2">Хит</span></a>
-                    <a href="rasprodazha/" class="btn btn-danger-1 label-button">Распродажа<span
-                                class="badge badge-secondary ml-2">Sale</span></span></a>
+                    <a href="tovaryi-shtuchno/" class="btn btn-danger-1 label-button">Товары штучно<span
+                                class="badge badge-secondary ml-2">HOT</span></span></a>
                 </div>
 
                 <div class="header-column d-none d-lg-flex">
@@ -585,7 +587,7 @@
 
 <!-- Input Spinner -->
 <script src="{'assets_url' | option}components/optolider/node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js"></script>
-
+<script type="text/javascript" src="https://cloudparser.ru/widget/script?hash=da9ca15bac3ba23edabed333f6cdef6c5b6a82d9" async></script>
 {$_modx->regClientScript('assets_url' | option ~ 'components/optolider/dist/js/theme.js')}
 </body>
 </html>

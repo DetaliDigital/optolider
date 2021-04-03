@@ -103,7 +103,7 @@
                 <div class="header-column ml-3 d-none d-lg-flex">
                     <a href="novinki-nedeli/" class="btn btn-primary label-button">Новинки<span class="badge badge-secondary ml-2">New</span></a>
                     <a href="50-xitov/" class="btn btn-danger label-button">50 хитов<span class="badge badge-secondary ml-2">Хит</span></a>
-                    <a href="rasprodazha/" class="btn btn-danger-1 label-button">Распродажа<span class="badge badge-secondary ml-2">Sale</span></span></a>
+                    <a href="rasprodazha/" class="btn btn-danger-1 label-button">Товары штучно<span class="badge badge-secondary ml-2">Sale</span></span></a>
                 </div>
 
                 <div class="header-column d-none d-lg-flex">

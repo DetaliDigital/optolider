@@ -52,15 +52,15 @@
         </div>
     </div>
 </div>
-{if $_modx->resource.res_main_cat != ''}
+{if $_modx->resource.season_pop_cat != ''}
 <div class="p-cat-section" id="p-cat-section">
     <div class="container">
-        <h3>Популярные категории</h3>
+        <h3>Подарки для любимых</h3>
         <div class="p-cat-block clearfix">
 
             {'!pdoResources' | snippet : [
             'parents' => 2,
-            'resources' => $_modx->resource.res_main_cat,
+            'resources' => $_modx->resource.season_pop_cat,
             'includeTVs' => 'image,sale,new,min_price_category',
             'tvPrefix' => '',
             'tpl' => 'category.main.tpl',
@@ -74,6 +74,7 @@
     </div>
 </div>
 {/if}
+
 
 
 {'!preTools' | snippet : [
@@ -284,15 +285,15 @@
     </div>
 </section>
 
-{if $_modx->resource.season_pop_cat != ''}
+{if $_modx->resource.res_main_cat != ''}
 <div class="p-cat-section" id="p-cat-section">
     <div class="container">
-        <h3>Готовимся к Новому Году</h3>
+        <h3>Популярные категории</h3>
         <div class="p-cat-block clearfix">
 
             {'!pdoResources' | snippet : [
             'parents' => 2,
-            'resources' => $_modx->resource.season_pop_cat,
+            'resources' => $_modx->resource.res_main_cat,
             'includeTVs' => 'image,sale,new,min_price_category',
             'tvPrefix' => '',
             'tpl' => 'category.main.tpl',
@@ -306,8 +307,6 @@
     </div>
 </div>
 {/if}
-
-
 
 <section class="bg-light py-5">
     <div class="container">

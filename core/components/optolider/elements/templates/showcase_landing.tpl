@@ -1,5 +1,6 @@
-{include 'dsmc_head'}
-{include 'dsmc_header'}
+{extends 'template:51'}
+
+{block 'main'}
 
 <div class="main my-4">
     <div class="container">
@@ -187,8 +188,4 @@
     </section>
 </div>
 
-{include 'dsmc_footer'}
-{include 'dsmc_script'}
-
-</body>
-</html>
+{/block}
