@@ -12,6 +12,17 @@ switch ($modx->event->name) {
             }
         });
 
+        $fenom->addModifier('dsmc_vendor_count', function ($input) use ($modx) {
+            if ($input) {
+                $vendor = $modx->getObject('msVendor', ['resource' => $input]);
+                if ($vendor) {
+                    $id = $vendor->get('id');
+                    $count = $modx->getCount('msProductData', ['vendor' => $id]);
+                    return $count;
+                }
+            }
+        });
+
         $fenom->addModifier('dsmc_parent_name', function ($input) use($modx) {
             if (!empty($input) && isset($input)) {
                 $id = implode(json_decode($modx->resource->getTVValue($input)));
