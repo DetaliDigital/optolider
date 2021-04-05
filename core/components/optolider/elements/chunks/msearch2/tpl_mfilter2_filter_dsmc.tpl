@@ -6,7 +6,7 @@
             <div class="mse2_custom pt-2 pb-2 mb-5">
 
 
-                {if 'id' | resource | in : [1617,1616,1991,5514,422,79]}
+                {if 'id' | resource | in : [1617,1616,1991,5514,422,79,14104]}
 
                 {else}
 
@@ -15,7 +15,7 @@
                 'level' => 0,
                 'where' => ['isfolder' => 1],
                 'outerClass' => 'nav menu_left_bar w-100',
-                'tplOuter' => 'outer.menu.category.leftbar'
+                'tplOuter' => 'outer.menu.category.leftbar',
                 'tpl' => 'row.menu.category.leftbar',
                 'rowClass' => 'nav-item w-100'
                 ]}
