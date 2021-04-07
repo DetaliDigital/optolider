@@ -72,12 +72,12 @@
                     <div class="header-column justify-content-start">
 
                         {'!getCache' | snippet : [
-                        'element' => 'pdoMenu'
-                        'cacheKey' => 'getMenu'
+                        'element' => 'pdoMenu',
+                        'cacheKey' => 'getMenu',
                         'tpl' => '@INLINE
                         <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a>{$wrapper}</li>',
                         'parents' => 0,
-                        'resources' => '1,73,76,229,12416,75,77,78',
+                        'resources' => '1,73,14130,76,229,12416,75,77,78',
                         'firstClass' => '',
                         'lastClass' => '',
                         'rowClass' => 'nav-item'
@@ -315,7 +315,7 @@
                     'firstClass' => '',
                     'lastClass' => '',
                     'parents' => 0,
-                    'resources' => '75,76,229,77',
+                    'resources' => '14130,75,76,229,77',
                     'rowClass' => 'pl-0 nav-item'
                     'outerClass' => 'nav nav-link-light flex-column flex-md-row flex-xl-column'
                     'sortby' => ''

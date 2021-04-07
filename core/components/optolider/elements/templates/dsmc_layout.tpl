@@ -49,7 +49,6 @@
             <div class="header-top-container container">
                 <div class="header-row">
                     <div class="header-column justify-content-start">
-
                         {'!getCache' | snippet : [
                         'element' => 'pdoMenu'
                         'cacheKey' => 'getMenu'
@@ -176,7 +175,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
     </div>
